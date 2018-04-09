@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightestgrey"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".DoubtsFragment" >
+	
+    <LinearLayout
+        android:id="@+id/doubt_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/ask_doubt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_green_bg"
+            android:text="@string/ask_doubt"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ask_doubt_btn_text_size"
+            android:paddingLeft="@dimen/ask_doubt_btn_pad_left_right"
+            android:paddingRight="@dimen/ask_doubt_btn_pad_left_right"
+            android:paddingTop="@dimen/ask_doubt_btn_pad_top"
+            android:paddingBottom="@dimen/ask_doubt_btn_pad_bottom"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+           	android:background="@color/lightergrey"
+           	android:gravity="right|center_vertical"
+           	android:layout_gravity="right"
+           	android:paddingRight="@dimen/doubts_filter_right_pad"
+            >
+	        <Spinner
+	            android:id="@+id/doubts_list_filter"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textAlignment="gravity"
+	            android:textDirection="ltr"
+	            android:gravity="left"/>
+	            <!--android:entries="@array/doubts_list_filter"-->
+
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+            android:id="@+id/doubt_progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/doubts_loading_text_size"
+            android:textColor="#999999"
+            android:background="@color/lightestgrey"
+            android:layout_marginTop="40dp"
+            android:text="@string/loading_doubts"
+            android:gravity="center"/>
+
+    <WebView
+        android:id="@+id/doubts_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightestgrey"
+        android:minHeight="200dp"
+        />
+</LinearLayout>

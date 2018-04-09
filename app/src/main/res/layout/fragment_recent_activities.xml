@@ -1,0 +1,84 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nhance.android.recentActivities.RecentActivitiesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/doubt_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <Button
+            android:id="@+id/add_new_feed"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_green_bg"
+            android:text="@string/add_feed"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ask_doubt_btn_text_size"
+            android:paddingLeft="@dimen/ask_doubt_btn_pad_left_right"
+            android:paddingRight="@dimen/ask_doubt_btn_pad_left_right"
+            android:paddingTop="@dimen/ask_doubt_btn_pad_top"
+            android:paddingBottom="@dimen/ask_doubt_btn_pad_bottom"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:background="@color/lightergrey"
+            android:gravity="right|center_vertical"
+            android:layout_gravity="right"
+            android:paddingRight="@dimen/doubts_filter_right_pad"
+            >
+            <Spinner
+                android:id="@+id/feed_list_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="gravity"
+                android:textDirection="ltr"
+                android:gravity="left"
+                android:overlapAnchor="false"
+                />
+        </LinearLayout>
+    </LinearLayout>
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+           <!-- <LinearLayout
+                android:id="@+id/no_recent_activities_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView style="@style/sad_smiley_img" />
+
+                <TextView
+                    style="@style/sad_smiley_text"
+                    android:text="@string/no_content_found"></TextView>
+            </LinearLayout>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+</FrameLayout>

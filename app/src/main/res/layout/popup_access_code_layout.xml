@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/lightestgrey"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activate_access_code_button_margin_top"
+        android:background="@color/lightergrey"
+        android:paddingLeft="@dimen/popup_side_padding" >
+
+        <ImageView
+            android:id="@+id/close_payment_info_popup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/popup_cross_margin_right"
+            android:layout_marginTop="@dimen/popup_cross_margin_top"
+            android:background="@drawable/selector_blue_onpress"
+            android:contentDescription="@string/close"
+            android:padding="@dimen/popup_cross_padding"
+            android:src="@drawable/cross" />
+
+        <TextView
+            android:id="@+id/sdcard_group_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/close_payment_info_popup"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:paddingBottom="@dimen/sdcard_group_heading_padding_v"
+            android:paddingLeft="@dimen/sdcard_group_heading_padding_h"
+            android:paddingRight="@dimen/sdcard_group_heading_padding_h"
+            android:paddingTop="@dimen/sdcard_group_heading_padding_v"
+            android:text="@string/courses"
+            android:textSize="@dimen/sdcard_content_access_heading_text_size" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/access_code_email"
+        style="@style/login_page_edit_text"
+        android:layout_marginBottom="@dimen/login_image_title_margin_bottom"
+        android:gravity="center"
+        android:hint="@string/enter_purchase_email_id" />
+
+    <EditText
+        android:id="@+id/access_code_input"
+        style="@style/login_page_edit_text"
+        android:gravity="center"
+        android:hint="@string/enter_access_code" />
+
+    <Button
+        android:id="@+id/access_code_activate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activate_access_code_button_margin_top"
+        android:layout_marginTop="@dimen/activate_access_code_button_margin_top"
+        android:background="@drawable/selector_blue_bg"
+        android:paddingBottom="@dimen/activate_access_code_padding_v"
+        android:paddingLeft="@dimen/activate_access_code_padding_h"
+        android:paddingRight="@dimen/activate_access_code_padding_h"
+        android:paddingTop="@dimen/activate_access_code_padding_v"
+        android:text="@string/activate"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</LinearLayout>

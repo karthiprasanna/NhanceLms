@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+
+   >
+    <LinearLayout
+        android:id="@+id/lin_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f9632f"
+
+        >
+        <include layout="@layout/signup_login_page_head" />
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+android:layout_marginTop="50dp"
+android:layout_below="@+id/lin_head"
+        android:id="@+id/login_inputs_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingBottom="40dp"
+        android:layout_toEndOf="@+id/login_progressBar_container"
+        android:background="@drawable/login_inputpage_white_bkg">
+        />
+
+        <ImageView android:src="@drawable/logo_for_acme"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center_horizontal" />
+
+
+        <!-- Email Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/login_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/black"
+                android:textColor="@color/grey"
+                android:drawableLeft="@drawable/loginprofile"
+                android:textCursorDrawable="@null"
+
+                android:hint="@string/member_id_hint"  />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Password Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText   android:id="@+id/login_password"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="@color/grey"
+                android:hint="@string/password"
+
+                android:drawableLeft="@drawable/psw"
+                android:textCursorDrawable="@null"
+                android:textColorHint="@color/black"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/login_page_check_box"
+            android:textColor="@color/grey"
+            style="@style/login_page_check_box" />
+
+        <TextView
+            android:id="@+id/login_submit_button"
+            style="@style/landing_last_page_buttons"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/login" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_progressBar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_will_take_time"
+            android:textSize="@dimen/login_inputs_page_big_font_size" />
+
+        <ProgressBar
+            android:id="@+id/login_progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_inputs_page_progress_bar_margin_top" />
+    </LinearLayout>
+
+</RelativeLayout>

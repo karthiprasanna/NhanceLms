@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="#ddd"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+    android:padding="5dp"
+    android:id="@+id/content_student_performance"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_margin="5dp"
+        android:id="@+id/ass_ques"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="left"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_gravity="left"
+            android:textColor="@color/slpdarkgreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/solutions"/>
+        <TextView
+            android:textSize="20dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/list_questionsolutions"
+            android:textColor="@color/slpdarkgreen"
+            android:gravity="center"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+
+
+
+        <TextView
+            android:textSize="20dp"
+            android:textColor="@color/orange"
+            android:id="@+id/list_questiontype"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/type_caps"/>
+    </LinearLayout>
+
+        <View
+            android:visibility="gone"
+            android:id="@+id/dividerView1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ass_ques"
+            android:background="@color/light_gray"
+            />
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:layout_marginTop="5dp"
+        android:id="@+id/ques"
+        android:weightSum="1"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_below="@+id/dividerView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/list_questionnumber"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:paddingTop="15dp"
+            android:gravity="center"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"/>
+
+<TextView
+    android:textSize="20dp"
+    android:layout_marginTop="15dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="."
+   />
+            <WebView
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="0dp"
+            android:id="@+id/list_questionname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+       />
+
+
+    </LinearLayout>
+        <View
+            android:visibility="gone"
+            android:id="@+id/dividerView2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ques"
+            android:background="@color/light_gray"
+            />
+<LinearLayout
+    android:layout_margin="5dp"
+    android:layout_marginBottom="5dp"
+    android:id="@+id/list_gridview"
+    android:layout_below="@+id/dividerView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.nhance.android.assignment.MyGridView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+         android:stretchMode="columnWidth"
+        android:id="@+id/gridView"
+        android:numColumns="1"
+     >
+
+    </com.nhance.android.assignment.MyGridView>
+</LinearLayout>
+
+        <com.nhance.android.assignment.TeacherModule.CustomProgressBar
+            android:id="@+id/list_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:layout_below="@+id/list_gridview"
+            android:progress="0"
+            android:layout_centerInParent="true"
+            android:progressDrawable="@android:color/transparent"
+            />
+        <View
+
+            android:layout_above="@+id/lin"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            />
+    <RelativeLayout
+    android:layout_below="@+id/list_progressbar"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+        android:id="@+id/lin"
+    android:layout_height="wrap_content">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            />
+
+
+        <LinearLayout
+            android:background="@color/white"
+            android:visibility="visible"
+            android:id="@+id/lin_youranswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="150"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                />
+            <LinearLayout
+                android:id="@+id/upVOteLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center">
+
+                <TextView
+                    android:textSize="20dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/ass_correct"
+                    android:textColor="@color/blue"
+                    />
+
+
+
+                <TextView
+                    android:textSize="20dp"
+                    android:id="@+id/list_correct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:textColor="@color/blue"
+                    />
+
+            </LinearLayout>
+            <View
+                android:id="@+id/dividerView4"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                />
+
+            <LinearLayout
+                android:id="@+id/commentsLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/ass_incorrect"
+                    android:textColor="@color/green"
+                    />
+
+
+
+                <TextView
+                    android:textSize="20dp"
+                    android:id="@+id/list_incorrect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:textColor="@color/green"
+                    />
+
+            </LinearLayout>
+
+
+            <View
+
+                android:id="@+id/dividerView5"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                />
+
+
+
+            <LinearLayout
+                android:id="@+id/commentsLayout1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/ass_left"
+                    android:textColor="@color/grey"
+                    />
+
+
+
+                <TextView
+                    android:textSize="20dp"
+                    android:id="@+id/list_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:textColor="@color/grey"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_below="@+id/lin_youranswer"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            />
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,154 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:background="#F4F5FA"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/module_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f9632f" >
+
+        <LinearLayout
+            android:id="@+id/module_head_icon_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_blue_onpress"
+            android:layout_marginRight="@dimen/module_head_icon_holder_margin_right"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/module_page_back_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/img"
+                android:src="@drawable/icon_arrow_back_page" />
+
+            <ImageView
+                android:id="@+id/module_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/img"
+                android:src="@drawable/icon_slpcontent" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/make_info_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:alpha="0.7"
+            android:background="@drawable/selector_blue_onpress"
+            android:contentDescription="@string/img"
+            android:padding="10dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_settings_white_24dp" />
+
+
+        <ImageView
+
+            android:id="@+id/sync_module"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/make_info_buttons"
+            android:alpha="0.7"
+            android:background="@drawable/selector_blue_onpress"
+            android:contentDescription="@string/img"
+            android:padding="10dp"
+            android:scaleType="center"
+            android:src="@drawable/refresh" />
+
+        <ProgressBar
+            android:id="@+id/moudle_sync_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/make_info_buttons"
+            android:background="@color/slpgreen"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/module_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/sync_module"
+            android:layout_toRightOf="@id/module_head_icon_holder"
+            android:ellipsize="marquee"
+            android:paddingTop="@dimen/module_title_padding_top"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/module_title_font_size" />
+
+        <TextView
+            android:id="@+id/module_added_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/module_title"
+            android:layout_toLeftOf="@id/sync_module"
+            android:layout_toRightOf="@id/module_head_icon_holder"
+            android:paddingBottom="@dimen/module_title_desc_padding_bottom"
+            android:textColor="@color/white"
+            android:textSize="@dimen/module_title_desc_font_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/module_progress_holder"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/module_progress_holder_height"
+        android:layout_alignParentBottom="true" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/darkergrey" />
+
+        <View
+            android:id="@+id/module_progress_bar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/darkgreen" />
+
+        <TextView
+            android:id="@+id/module_progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Progress 0%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/module_progress_text_font_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/module_progress_holder"
+        android:layout_below="@id/module_head"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".ModuleActivity" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/module_main_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/module_main_section_margin_left"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,272 @@
+.RTEImageDiv img{
+	min-width:20px;
+	min-height:20px;
+}
+#doubtsHolder{
+	padding:8px 7px;
+}
+#doubtPage,
+#doubtsHolder{
+	min-width:300px;
+	min-height:390px;
+}
+#doubtPage{
+	min-height:100%;
+}
+.doubtsZeroLevel,
+.loadingStyles {
+	margin-top: 50px;
+}
+.loadingStyles.loadMore{
+	margin-top:0px;
+	padding:10px 0;
+}
+.doubt{
+	margin-bottom:7px;
+	padding: 7px 15px 14px 7px;
+}
+#doubtPage .doubt{
+	margin-bottom:0px;
+	padding: 20px 15px 15px 15px;
+}
+#doubtPage .doubtStatSec{
+	min-width:255px;
+}
+.doubtReplyImgTd,
+.doubtAnsImgTd,
+.doubtFlwImgTd,
+.doubtImgTd {
+	padding-right:5px;
+	width:25px;
+	max-height:25px;
+	height:25px;
+	min-width:25px;
+	overflow:hidden;
+}
+.doubtAnsReplyUserImg,
+.doubtAnsUserImg,
+.doubtFlwUserImg,
+.doubtUserImg{
+	width:25px;
+}
+.doubtByDiv{
+	height:11px;
+	margin-bottom: 4px;
+}
+.doubtBy{
+	font-size: 11px;
+}
+.doubtAnsReplyTime,
+.doubtTime, .doubtAnsTime {
+	font-size:10px;
+	padding-left:3px;
+}
+.doubtTitle {
+	font-size: 20px;
+	line-height:21px;
+	margin-bottom: 4px;
+}
+#doubtPage .doubtTitle {
+	font-size: 20px;
+	line-height: 21px;
+}
+.doubtBody {
+	font-size:13px;
+	line-height:14px;
+	margin-bottom:10px;
+}
+#doubtPage .doubtsTag {
+	margin-bottom:6px;
+}
+#doubtPage .doubtBody {
+	margin-bottom: 5px;
+}
+.doubtTags {
+	font-size: 11px;
+	margin-bottom: 12px;
+}
+.doubtTag {
+	margin-right: 5px;
+	padding: 2px 8px;
+	font-size:12px;
+	margin-bottom: 3px;
+}
+.doubtAnsCountDiv, .doubtFollowerCountDiv {
+	font-size: 11px;
+	margin-right:11px;
+}
+.doubtAnsCount, .doubtFollowerCount {
+	font-size: 20px;
+	line-height:20px;
+}
+/* SINGLE PAGE DOUBT */
+.followDoubtBtn,
+.unfollowDoubtBtn,
+.addAnsButton {
+	font-size: 14px;
+	padding: 5px 15px;
+	margin-left:10px;
+}
+.unfollowDoubtBtn{
+	padding:5px 10px;
+}
+#doubtPageFollowers,
+#doubtPageAnswers {
+	padding: 20px 15px 15px 15px;
+}
+.followersText,
+.answersText{
+	font-size:20px;
+	padding-left:30px;
+}
+.doubtAns {
+	padding:20px 0;
+}
+.doubtFollower{
+	margin-left:30px;
+	padding:20px 0 8px 0;
+}
+.doubtAnsByDiv{
+	margin-bottom:5px;
+}
+.doubtAnsBy{
+	font-size:12px;
+}
+.doubtFlwBy{
+	font-size:14px;
+}
+.doubtFlwByProfileDiv{
+	padding-top:2px;
+	font-size:11px;
+}
+.doubtAnsBody {
+	font-size: 17px;
+	padding-bottom: 10px;
+}
+.doubtAnsStatsSec {
+	font-size: 14px;
+	line-height: 15px;
+}
+.doubtAnsLikeCountDiv,
+.doubtAnsReplyCountDiv {
+	padding: 7px 9px;
+}
+/*.doubtAnsReplyCountImg, .doubtAnsLikeCountImg {
+	background-position: -38px -34px;
+	height: 10px;
+	width: 10px;
+	margin-left:5px;
+}
+.doubtAnsLikeCountImg {
+	background-position: -12px -34px;
+	width:7px;
+	height:11px;
+}
+.doubtAnsLikeCountImgLiked .doubtAnsLikeCountImg {
+	background-position: -25px -34px;
+	width:7px;
+	height:11px;
+}*/
+.doubtAnsReplyCountImg, .doubtAnsLikeCountImg {
+	background-position: -38px -10px;
+	height: 12px;
+	width: 12px;
+	margin-left:5px;
+}
+.doubtAnsLikeCountImg {
+	background-position: -11px -9px;
+	width:9px;
+	height:15px;
+}
+.doubtAnsLikeCountImgLiked .doubtAnsLikeCountImg {
+	background-position: -24px -9px;
+	width:9px;
+	height:15px;
+}
+/* REPLY */
+.doubtAnsRepliesSec {
+	padding: 13px;
+	margin-top:8px;
+	min-width:234px;
+	max-width:90%;
+	overflow:hidden;
+}
+.doubtAnsReplySubmitButton{
+	padding: 4px 20px;
+}
+.doubtAnsReply {
+	padding: 12px 0 4px;
+}
+.doubtAnsReplySubmitButtonDiv{
+	padding-top:5px;
+}
+.doubtAnsReplyMainSec {
+	font-size: 12px;
+	padding: 5px 0px;
+}
+.doubtAnsReplyBy{
+	font-size:12px;
+	margin-bottom: 6px;
+}
+.doubtAnsReplyBody{
+	font-size:15px;
+}
+.addDoubtAnsHead{
+	font-size:22px;
+	line-height:22px;
+}
+#addDoubtAnswer .addDoubtAnsHead{
+	padding-bottom:18px;
+}
+.addAnswerButtons {
+	margin: 10px 0;
+}
+.greenButton, .grayButton {
+	font-size: 14px;
+	padding: 5px 15px;
+}
+.RTEArea{
+	padding:10px;
+	min-height: 80px;
+        max-height: 500px;
+}
+.RTEArea.textArea{
+	min-width:260px;
+	width:93%;
+}
+#addDoubtAnswer .RTEArea.textArea{
+	min-width:220px;
+	width:93%;
+}
+.askDoubtTitle{
+	font-size:14px;
+	padding:12px 0 3px;
+}
+#addDoubtAnswer{
+        padding: 20px;
+}
+.tagsSelectHolder{
+	height:30px;
+	overflow:hidden;
+}
+#doubtAskPage{
+	padding:18px 15px 40px 15px;
+}
+.selectTag{
+	font-size:12px;
+	padding:3px 0 3px 5px;
+}
+.askDoubtTitleInput{
+	padding:15px 2.5% 14px;
+	font-size:14px;
+}
+.askDoubtTitleInput::-webkit-input-placeholder{
+	font-size:12px;
+}
+.RTEImageDiv img{
+ display: block;
+ max-width:150px;
+ max-height:150px;
+ width: 150px;
+ height: 150px;
+ }

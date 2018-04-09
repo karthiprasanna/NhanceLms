@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="@dimen/assignmet_text_size"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/question_comments_sol_firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sub_name_list"
+        android:text="LastName"/>
+    <com.nhance.android.customviews.NonScrollableGridView
+        android:id="@+id/question_number"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/test_answer_course_list_item_qus_ans_margin_top"
+        android:columnWidth="@dimen/test_answer_course_list_item_qus_ans_box_size"
+        android:horizontalSpacing="@dimen/test_answer_course_list_item_qus_ans_box_spacing_h"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/test_answer_course_list_item_qus_ans_box_spacing_v" >
+    </com.nhance.android.customviews.NonScrollableGridView>
+
+</LinearLayout>

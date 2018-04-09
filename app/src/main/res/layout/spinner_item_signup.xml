@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:drawableRight="@drawable/navigation_analytics"
+    android:paddingBottom="@dimen/my_programs_category_vertical_padding"
+    android:paddingLeft="@dimen/my_programs_category_vertical_padding"
+    android:paddingRight="@dimen/my_programs_category_vertical_padding"
+    android:paddingTop="@dimen/my_programs_category_vertical_padding"
+    android:textColor="@color/darkestgrey"
+    android:textSize="@dimen/login_inputs_page_input_font_size" 
+    android:background="@color/red">
+
+</TextView>
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/signup_spinner_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:drawableRight="@drawable/down_arrow"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/login_inputs_page_input_side_padding"
+        android:paddingRight="@dimen/login_inputs_page_input_side_padding"
+        android:singleLine="true"
+        android:textSize="@dimen/login_inputs_page_input_font_size" >
+    </TextView>
+
+</RelativeLayout>

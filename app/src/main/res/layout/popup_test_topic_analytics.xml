@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <include layout="@layout/popup_common_header_layout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightergrey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightestgrey"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/popup_small_text_button_vertical_padding"
+        android:paddingLeft="@dimen/popup_side_padding"
+        android:paddingRight="@dimen/popup_side_padding"
+        android:paddingTop="@dimen/popup_small_text_button_vertical_padding"
+        android:weightSum="1" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"
+            android:gravity="center"
+            android:text="@string/correct"
+            android:textSize="@dimen/popup_normal_text_font_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".34"
+            android:gravity="center"
+            android:text="@string/incorrect"
+            android:textSize="@dimen/popup_normal_text_font_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"
+            android:gravity="center"
+            android:text="@string/left"
+            android:textSize="@dimen/popup_normal_text_font_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/test_topic_analytics_info_popup_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/test_analytics_topic_analytics_popup_height"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/popup_side_padding"
+        android:paddingRight="@dimen/popup_side_padding"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/correct_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"
+            android:gravity="center"
+            android:text="@string/dummy_number"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/popup_normal_text_font_size" />
+
+        <TextView
+            android:id="@+id/incorrect_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".34"
+            android:gravity="center"
+            android:text="@string/dummy_number"
+            android:textColor="@color/red"
+            android:textSize="@dimen/popup_normal_text_font_size" />
+
+        <TextView
+            android:id="@+id/left_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"
+            android:gravity="center"
+            android:text="@string/dummy_number"
+            android:textColor="@color/lightgrey"
+            android:textSize="@dimen/popup_normal_text_font_size" />
+    </LinearLayout>
+
+</LinearLayout>

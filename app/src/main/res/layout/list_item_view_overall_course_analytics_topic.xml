@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/overall_course_analytics_topic_item_marging_left"
+    android:paddingRight="@dimen/overall_course_analytics_topic_item_marging_left" >
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/overall_course_analytics_topic_item_padding_h"
+        android:paddingRight="@dimen/overall_course_analytics_topic_item_padding_h"
+        android:weightSum="100" >
+
+        <TextView
+
+            android:id="@+id/topic_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="70"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingLeft="10dp"
+            android:lineSpacingExtra="2dp"
+            android:paddingBottom="@dimen/overall_course_analytics_topic_name_padding_v"
+            android:paddingTop="@dimen/overall_course_analytics_topic_name_padding_v"
+            android:text="@string/topic"
+            android:textColor="@color/darkergrey"
+            android:textSize="@dimen/overall_course_analytics_topic_name_text_size" />
+
+        <TextView
+            android:id="@+id/topic_strength"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/overall_course_analytics_q_level_padding_right"
+            android:layout_weight="30"
+            android:paddingBottom="@dimen/overall_course_analytics_topic_name_padding_v"
+            android:paddingTop="@dimen/overall_course_analytics_topic_name_padding_v"
+            android:text="@string/strength"
+            android:paddingRight="10dp"
+            android:textColor="@color/darkergrey"
+            android:textSize="@dimen/overall_course_analytics_topic_name_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/overall_course_analytics_topic_item_marging_bottom" />
+
+</LinearLayout>

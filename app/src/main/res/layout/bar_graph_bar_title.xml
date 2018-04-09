@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/bar_graph_bar_width"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/bar_graph_bar_margin"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="@dimen/bar_graph_values_width"
+        android:layout_height="wrap_content"
+        android:background="@color/darkergrey"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:paddingBottom="@dimen/bar_graph_values_pad_top"
+        android:paddingTop="@dimen/bar_graph_values_pad_top"
+        android:singleLine="true"
+        android:text="0-1"
+        android:textSize="@dimen/bar_graph_values_font_size" />
+</LinearLayout>

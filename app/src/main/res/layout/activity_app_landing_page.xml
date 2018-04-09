@@ -1,0 +1,183 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/main_content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/navigation_drawer_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#ffffff"
+        android:clickable="true">
+
+        <RelativeLayout
+            android:id="@+id/navigation_drawer_user_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lightergrey">
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+
+                android:background="@color/lightergrey"
+                android:orientation="vertical"
+                android:id="@+id/navprogram"
+                android:paddingBottom="@dimen/navigation_drawer_user_details_padding_bottom"
+                android:paddingLeft="@dimen/navigation_common_side_padding"
+                android:paddingTop="@dimen/navigation_drawer_user_details_padding_top">
+
+                <TextView
+                    android:id="@+id/navigation_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/navigation_drawer_user_name_margin_bottom"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/program"
+                    android:textAllCaps="true"
+                    android:textColor="@color/darkblue"
+                    android:textSize="@dimen/navigation_drawer_user_name_font_size"></TextView>
+
+                <TextView
+                    android:id="@+id/navigation_user_prog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/navigation_drawer_program_font_size"
+                    android:textStyle="bold"
+                    android:visibility="gone"></TextView>
+
+                <TextView
+                    android:id="@+id/navigation_no_program_selected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/click_here_to_select_program"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/navigation_drawer_join_program_font_size"
+                    android:textStyle="italic"></TextView>
+            </LinearLayout>
+<View
+    android:layout_width="wrap_content"
+    android:layout_height="1dp"
+    android:background="@color/grey"
+    android:layout_below="@+id/navprogram"
+    >
+
+</View>
+
+            <TextView
+                android:id="@+id/navigation_drawer_go_to_programs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/navigation_drawer_go_to_programs_margin_left"
+                android:drawableRight="@drawable/ic_arrow_forward"
+                android:gravity="center_vertical"
+                android:text="@string/all"
+                android:textColor="@color/black"
+                android:layout_below="@+id/navprogram"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/navigation_sync_buttons_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/navigation_sync_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/red"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/img"
+                    android:src="@drawable/refresh" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_sync_button_drawable_padding"
+                    android:paddingBottom="@dimen/navigation_sync_button_vertical_padding"
+                    android:paddingTop="@dimen/navigation_sync_button_vertical_padding"
+                    android:text="@string/sync"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/navigation_sync_button_font_size" />
+
+                <TextView
+                    android:id="@+id/last_sync_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/navigation_last_sync_time_margin_left"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="#e3e3e3"
+                    android:textSize="@dimen/navigation_last_sync_time_font_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/navigation_sync_in_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/darkergrey"
+                android:gravity="center"
+                android:paddingBottom="@dimen/navigation_sync_button_vertical_padding"
+                android:paddingTop="@dimen/navigation_sync_button_vertical_padding"
+                android:text="@string/syncing"
+                android:textColor="@color/black"
+                android:textSize="@dimen/navigation_sync_button_font_size"
+                android:visibility="gone">
+
+            </TextView>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/navigation_items_holder_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/navigation_sync_buttons_holder"
+            android:layout_below="@id/navigation_drawer_user_details">
+
+            <LinearLayout
+                android:id="@+id/navigation_items_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/navigation_extra_content_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/navigation_sync_buttons_holder"
+            android:layout_below="@id/navigation_drawer_user_details"
+            android:orientation="vertical"></LinearLayout>
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

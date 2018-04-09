@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        card_view:contentPaddingLeft="10dp"
+        card_view:contentPaddingRight="10dp"
+        card_view:contentPaddingTop="10dp"
+        card_view:contentPaddingBottom="10dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:contentPadding="2dp">
+        <RelativeLayout
+    android:id="@+id/content_timer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+>
+
+    <RelativeLayout
+
+        android:id="@+id/lin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <RelativeLayout
+            android:id="@+id/lin_img"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/ass_userprofile"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/profile"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/light_gray"/>
+
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/userid"
+                android:text="rrrrr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/ass_userprofile"
+
+                android:id="@+id/lin_fname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/ass_username"
+                    android:textColor="@color/slpdarkgreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/first_name"/>
+
+                <TextView
+                    android:layout_below="@+id/ass_username"
+                    android:textColor="@color/slpdarkgreen"
+                    android:id="@+id/ass_programname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/programname"/>
+            </LinearLayout>
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+<View
+    android:layout_marginTop="10dp"
+    android:id="@+id/view1"
+    android:layout_below="@+id/lin"
+    android:layout_width="wrap_content"
+    android:background="@color/grey"
+    android:layout_height="1dp"/>
+
+
+<RelativeLayout
+    android:id="@+id/lin_details"
+    android:layout_below="@+id/view1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/lin_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <com.nhance.android.assignment.TeacherModule.CustomProgressBar
+                    android:id="@+id/student_progressbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="0"
+
+                    android:layout_centerInParent="true"
+                    android:progressDrawable="@android:color/transparent" />
+            </RelativeLayout>
+
+    <View
+        android:id="@+id/dividerView2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/lin_progress"
+        android:background="@color/grey"
+        />
+
+    <LinearLayout
+
+        android:visibility="visible"
+        android:id="@+id/lin_youranswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dividerView2"
+        android:weightSum="100"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey"
+            />
+        <LinearLayout
+            android:id="@+id/upVOteLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/upVote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="@string/ass_correct"
+                android:textColor="@color/green"
+                />
+
+
+
+            <TextView
+                android:id="@+id/ass_correctanswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="2dp"
+                android:text="0"
+                android:textColor="@color/green"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/dividerView3"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey"
+            />
+
+        <LinearLayout
+            android:id="@+id/commentsLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="@string/ass_incorrect"
+                android:textColor="@color/red"
+                />
+
+            <TextView
+                android:id="@+id/ass_incorrectanswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textColor="@color/red"
+                />
+
+        </LinearLayout>
+        <View
+            android:id="@+id/dividerView4"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey"
+            />
+
+        <LinearLayout
+            android:id="@+id/commentsLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="Left  :"
+                android:textColor="@color/grey"
+                />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/ass_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="2dp"
+                android:text="0"
+                android:textColor="@color/grey"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+            <View
+                android:layout_below="@+id/lin_details"
+                android:id="@+id/dividerView5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                />
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/lin_details"
+        android:id="@+id/datetime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/ass_lastdateatempted"
+            android:textColor="@color/slpdarkgreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/date"/>
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/viewattempts"
+            android:background="@drawable/rounded_corner"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/viewattempt"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
+</android.support.v7.widget.CardView>
+    </RelativeLayout>

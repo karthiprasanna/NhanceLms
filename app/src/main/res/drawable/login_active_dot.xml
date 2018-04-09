@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval" >
+<!-- 
+    <corners android:radius="@dimen/login_page_bottom_dot_dimen" />
+ -->
+    <solid android:color="@color/darkergrey" />
+
+</shape>

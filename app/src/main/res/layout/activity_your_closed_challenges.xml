@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefreshLayoutmsg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray"
+        android:padding="10dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner2"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:background="@drawable/rounded_corner2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:gravity="right|center_vertical"
+                android:layout_gravity="right"
+                android:paddingRight="@dimen/doubts_filter_right_pad"
+                >
+                <Spinner
+                    android:id="@+id/yc_recent_popular"
+                    android:entries="@array/doubts_list_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="gravity"
+                    android:textDirection="ltr"
+                    android:gravity="left"/>
+                <!--android:entries="@array/doubts_list_filter"-->
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner2"
+                android:gravity="right|center_vertical"
+                android:layout_gravity="right"
+                android:paddingRight="@dimen/doubts_filter_right_pad"
+                >
+
+
+                <Spinner
+                    android:id="@+id/ycspin_sublist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textAlignment="gravity"
+                    android:textDirection="ltr" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_marginTop="4dp"
+            android:id="@+id/ycre"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/empty_yc_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="No Closed Challenges."
+                android:textSize="@dimen/challenge_text_size"
+></TextView>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/yc_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="4dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

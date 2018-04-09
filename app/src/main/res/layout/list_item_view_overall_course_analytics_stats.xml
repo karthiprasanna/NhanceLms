@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corner2"
+    android:gravity="center"
+    android:paddingBottom="@dimen/overall_course_analytics_stats_padding_v"
+    android:paddingTop="@dimen/overall_course_analytics_stats_padding_v" >
+
+    <ImageView
+        android:id="@+id/accuray_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/img"
+        android:src="@drawable/profile_avg_accuracy" />
+
+    <TextView
+        android:id="@+id/accuracy_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/overall_course_analytics_accuracy_margin_left"
+        android:layout_marginRight="@dimen/overall_course_analytics_accuracy_margin_right"
+        android:layout_toRightOf="@id/accuray_icon"
+        android:lineSpacingMultiplier=".85"
+        android:text="@string/accuracy"
+        android:textColor="@color/darkergrey"
+        android:textSize="@dimen/overall_course_analytics_stat_text_size" />
+
+    <TextView
+        android:id="@+id/accuracy_text_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/accuracy_text_view"
+        android:layout_below="@id/accuracy_text_view"
+        android:lineSpacingMultiplier=".9"
+        android:text="@string/dummy_percentage"
+        android:textColor="@color/green"
+        android:textSize="@dimen/overall_course_analytics_stat_value_text_size"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/avg_speed_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/accuracy_text_view"
+        android:contentDescription="@string/img"
+        android:src="@drawable/profile_avg_speed" />
+
+    <TextView
+        android:id="@+id/avg_speed_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/overall_course_analytics_accuracy_margin_left"
+        android:layout_toRightOf="@id/avg_speed_icon"
+        android:lineSpacingMultiplier=".85"
+        android:text="@string/avg_speed"
+        android:textColor="@color/darkergrey"
+        android:textSize="@dimen/overall_course_analytics_stat_text_size" />
+
+    <TextView
+        android:id="@+id/avg_speed_text_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/avg_speed_text_view"
+        android:layout_below="@id/avg_speed_text_view"
+        android:layout_marginRight="@dimen/overall_analytics_course_list_item_course_name_margin_right"
+        android:lineSpacingMultiplier=".9"
+        android:text="@string/dummy_duration"
+        android:textColor="@color/green"
+        android:textSize="@dimen/overall_course_analytics_stat_value_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/avg_speed_text_value"
+        android:layout_toRightOf="@id/avg_speed_text_value"
+        android:text="@string/mins_per_q"
+        android:textColor="@color/darkgrey"
+        android:textSize="@dimen/overall_course_analytics_stat_text_size" />
+
+</RelativeLayout>

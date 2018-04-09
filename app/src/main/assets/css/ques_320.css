@@ -1,0 +1,144 @@
+body {
+	margin: 0;
+}
+
+.nonner {
+	display: none;
+}
+
+#answersHolder {
+	padding: 25px 20px 0 20px;
+	background-color: #FAFAFA;
+	text-align: center;
+}
+
+#answersTable {
+	width: 100%;
+}
+
+.correctAnswer,.yourAnswer {
+	background-color: #666;
+	color: white;
+	font-size: 12px;
+	padding: 11px 11px 8px;
+	text-align: center;
+	min-width: 100px;
+}
+
+.correctAnswer span,.yourAnswer span {
+	vertical-align: middle;
+}
+
+.yourAnswer.incorrect {
+	background-color: #FF4444;
+}
+
+.yourAnswer.correct {
+	background-color: #99CC00;
+}
+
+.correctAnswer {
+	background-color: #33B5E5;
+	min-width: 122px;
+}
+
+#answersTable .marginBetween {
+	width: 3px;
+	min-width: 3px;
+}
+
+#answersHolder .value {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#quesBody {
+	background-color: #FAFAFA;
+	color: #333333;
+	font-size: 18px;
+	padding: 20px 30px;
+	line-height: 35px;
+}
+
+.qNo {
+	font-weight: bold;
+}
+
+#quesOpts {
+	border-collapse: collapse;
+	width: 100%;
+}
+.RTEImageDiv img{
+  display: block;
+  max-width:150px;
+  max-height:150px;
+  width: 150px;
+  height: 150px;
+
+}
+#quesOpts td {
+	vertical-align: middle;
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	color: #333333;
+	background-color: #FFFFFF;
+
+}
+
+#quesOpts td:first-child {
+	font-size: 20px;
+	font-weight: bold;
+	width: 50px;
+	padding: 15px 9px;
+	text-align: center;
+}
+
+.quesOptNum {
+	display: inline-block;
+	padding: 7px 13px;
+	border-radius: 3px;
+}
+
+#quesOpts td:last-child {
+	font-size: 18px;
+	padding: 12px 14px;
+}
+
+#questionSolutionDiv {
+	padding: 20px;
+}
+
+.quesSolnHead {
+	font-size: 16px;
+	font-weight: bold;
+	color: #333;
+}
+
+#questionSolution {
+	padding-top: 12px;
+	font-size: 16px;
+	color: #666;
+}
+
+div.mathjax_display,div.MathJax_Display {
+	display: inline;
+}
+
+.mathjax_display {
+	font-size: 22px;
+}
+
+.vertAlignTop {
+	vertical-align: top;
+}
+
+.vidThumbImg img {
+	min-height: 90px;
+}
+.RTEImageDiv img{
+ display: block;
+ max-width:150px;
+ max-height:150px;
+ width: 150px;
+ height: 150px;
+ }

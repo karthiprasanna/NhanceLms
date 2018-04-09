@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="end"
+    android:textSize="@dimen/test_student_answers_course_filter_font_size"
+    android:paddingLeft="@dimen/test_student_answers_course_filter_pad_left"
+    android:paddingRight="@dimen/test_student_answers_course_filter_pad_left"
+    android:textColor="@color/darkergrey">
+</TextView>

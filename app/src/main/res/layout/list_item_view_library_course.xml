@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginBottom="@dimen/library_courses_list_divider_height"
+    android:background="@drawable/rounded_corner2"
+    android:orientation="horizontal" >
+
+    <View
+        android:layout_width="@dimen/library_course_blue_strip_width"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="3dp"
+        android:background="#009E9F" />
+
+    <TextView
+        android:id="@+id/library_courses_item_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/library_course_title_padding_left"
+        android:singleLine="true"
+        android:textAllCaps="true"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/library_course_title_font_size" />
+
+    <TextView
+        android:id="@+id/library_courses_content_count"
+        android:layout_width="@dimen/library_course_content_count_width"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center_horizontal|right"
+
+        android:paddingBottom="@dimen/library_course_content_count_padding_bottom"
+        android:paddingRight="15dp"
+        android:paddingTop="@dimen/library_course_content_count_padding_top"
+        android:singleLine="true"
+
+        android:text="@string/dummy_number"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:textSize="20dp" />
+
+</LinearLayout>

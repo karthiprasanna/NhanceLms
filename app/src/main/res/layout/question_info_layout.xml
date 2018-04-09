@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/close_library_info_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/popup_cross_margin_right"
+        android:layout_marginTop="@dimen/popup_cross_margin_top"
+        android:background="@drawable/selector_blue_onpress"
+        android:contentDescription="@string/close"
+        android:padding="@dimen/popup_cross_padding"
+        android:layout_gravity="right"
+        android:src="@drawable/cross_alert" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/library_popup_actions_margin_bottom" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/open_library_popup_item"
+                style="@style/popup_small_text_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/btn_rounded_corner"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/open"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/status_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/online"
+                android:textColor="@color/white"
+                android:textSize="@dimen/popup_buttons_common_font_size"
+                android:visibility="gone" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/library_info_popup_download_btn"
+                style="@style/popup_big_text_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_rounded_corner_green"
+                android:gravity="center"
+                android:text="@string/download_to_device"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+
+            <ProgressBar
+                android:id="@+id/start_download_loading"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/library_info_popup_download_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:max="100"
+                     >
+                </ProgressBar>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

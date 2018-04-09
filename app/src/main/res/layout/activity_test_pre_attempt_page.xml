@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="8dp"
+    android:background="#F5F5FA"
+
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:padding="2dp"
+        android:id="@+id/test_pre_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/test_pre_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/test_pre_bottom_buttom_height"
+            android:background="@drawable/btn_rounded_corner"
+            android:gravity="center"
+
+            android:text="@string/take_this_test"
+            android:textColor="@color/white"
+            android:textSize="@dimen/test_pre_bottom_button_font_size"
+            android:textStyle="bold" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/test_pre_start_the_test"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/test_pre_bottom_buttom_height"
+            android:gravity="center"
+            android:background="@drawable/btn_rounded_corner"
+            android:text="@string/start_test"
+            android:textColor="@color/white"
+            android:textSize="@dimen/test_pre_bottom_button_font_size"
+            android:textStyle="bold"
+            android:visibility="gone" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/test_pre_downloading_offline_test_results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_rounded_corner"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:text="@string/downloading_test_result_msg"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/test_pre_download_progress_bar_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lightergrey"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:visibility="visible" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/preparing_test"
+                android:textColor="@color/darkergrey"
+                android:textSize="12sp" >
+            </TextView>
+
+            <ProgressBar
+                android:id="@+id/test_pre_download_progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:gravity="center" >
+            </ProgressBar>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/test_pre_attempt_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/test_pre_bottom_layout" />
+
+</RelativeLayout>

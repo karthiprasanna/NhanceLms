@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/test_course_wise_answer_list_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+	android:background="#F5F5FA"
+    android:paddingLeft="@dimen/test_answer_padding"
+    android:paddingRight="@dimen/test_answer_padding" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/test_answer_status_idicator_margin_vertical"
+        android:layout_marginTop="@dimen/test_answer_status_idicator_margin_vertical"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:layout_width="@dimen/test_answer_status_idicator_size"
+            android:layout_height="@dimen/test_answer_status_idicator_size"
+            android:layout_marginRight="@dimen/test_answer_status_idicator_text_margin"
+            android:background="@drawable/correct_round_corner" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/test_answer_status_idicator_margin_horizontal"
+            android:text="@string/correct"
+            android:textColor="@color/lightgrey"
+            android:textSize="@dimen/test_answer_status_idicator_text_size" />
+
+        <TextView
+            android:layout_width="@dimen/test_answer_status_idicator_size"
+            android:layout_height="@dimen/test_answer_status_idicator_size"
+            android:layout_marginRight="@dimen/test_answer_status_idicator_text_margin"
+            android:background="@drawable/incorrect_round_corner" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/test_answer_status_idicator_margin_horizontal"
+            android:text="@string/incorrect"
+            android:textColor="@color/lightgrey"
+            android:textSize="@dimen/test_answer_status_idicator_text_size" />
+
+        <TextView
+            android:layout_width="@dimen/test_answer_status_idicator_size"
+            android:layout_height="@dimen/test_answer_status_idicator_size"
+            android:layout_marginRight="@dimen/test_answer_status_idicator_text_margin"
+            android:background="@drawable/left_round_corner" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/left"
+            android:textColor="@color/lightgrey"
+            android:textSize="@dimen/test_answer_status_idicator_text_size" />
+    </LinearLayout>
+	<RelativeLayout 
+	    android:id="@+id/test_student_answers_course_filter_container"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:visibility="gone"
+	    android:orientation="horizontal"
+	    android:layout_marginBottom="@dimen/test_answer_status_idicator_margin_vertical">
+	    <Spinner 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="left"
+	        android:layout_alignParentLeft="true"
+	        android:textDirection="ltr"
+	        android:id="@+id/test_student_answers_course_filter"/>
+	    <Spinner 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/test_student_answers_attempt_filter"
+	        android:gravity="right"
+	        android:layout_alignParentRight="true"
+	        android:entries="@array/questions_list_filter"/>
+	</RelativeLayout>
+    <ListView
+        android:id="@+id/test_course_list"
+        android:layout_width="match_parent"
+        android:dividerHeight="@dimen/test_answer_course_list_item_divider_height"
+        android:layout_weight="1"
+
+        android:layout_height="0dp" >
+    </ListView>
+
+</LinearLayout>

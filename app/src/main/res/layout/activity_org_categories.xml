@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey" >
+
+    <TextView
+        android:id="@+id/org_categories_tool_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/black"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/org_categories_tool_tip"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/org_categories_head_margin_bottom"
+                android:layout_marginTop="@dimen/org_categories_head_margin_top"
+                android:gravity="center_horizontal"
+                android:text="@string/categories_head"
+                android:textColor="@color/red"
+                android:textSize="@dimen/org_categories_head_font_size" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+            <com.nhance.android.customviews.CustomListView
+                android:id="@+id/org_categories_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/org_categories_list_side_margin"
+                android:layout_marginRight="@dimen/org_categories_list_side_margin"
+                android:dividerHeight="@dimen/org_categories_list_divider_height" >
+            </com.nhance.android.customviews.CustomListView>
+
+</LinearLayout>
+            <TextView
+                android:id="@+id/no_categories_found"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/org_categories_head_margin_bottom"
+                android:gravity="center_horizontal"
+                android:text="@string/no_categories_found"
+                android:textColor="@color/black"
+                android:textSize="@dimen/org_categories_no_categories_font_size"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

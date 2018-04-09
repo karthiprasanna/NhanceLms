@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".recentActivities.CommentsActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_margin="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+
+            <ImageView
+                android:id="@+id/user_profile_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/light_gray"
+                android:src="@drawable/default_profile_pic" />
+
+            <RelativeLayout
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_alignTop="@+id/user_profile_image"
+                android:layout_toRightOf="@+id/user_profile_image"
+                android:layout_toLeftOf="@+id/delete">
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="Test Team (Manager)"
+                    android:textSize="18dp"
+                    android:textColor="@color/colorgreen" />
+                <TextView
+                    android:id="@+id/feed_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@+id/user_name"
+                    android:text="New E-Book added to your library. Have a look!!" />
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/dividerView1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/lin"
+            android:background="@color/light_gray"
+            />
+
+        <LinearLayout
+            android:id="@+id/youTubeVideoView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lin1"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left">
+
+                <ImageView
+                    android:id="@+id/you_tube_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/boot_screen_bg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/you_tube_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="Antenna - YouTube dssfbhffbhsbdf"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/you_tube_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Follow us at: https://plus.google.com/+tutorvista/ Check us out at http://physics.tutorvista.com Antenna An antenna (or aerial) is a transducer designed to t..."
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/statusFeedView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/youTubeVideoView"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/layout_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/statusFeedTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="Before World War II, Auto Union and Mercedes had an epic rivalry on the track that was unfortunately funded by Adolf Hitler and the German Nazi Party. Ferdinand Porsche, whom you may have heard of, was put in charge of designing the Auto Union contenders and put the engine behind the driver to save weight. It just so happened the improved weight distribution also benefited handling.The Auto Union Type C was powered by a V16 engine with 560 horsepower." />
+
+
+                <ImageView
+                    android:id="@+id/statusFeedImageView"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/default_profile_pic" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/dividerView2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/vedioView"
+            android:background="@color/light_gray"
+            />
+
+        <LinearLayout
+            android:id="@+id/lin3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dividerView2"
+            android:weightSum="100"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/upVOteLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/upVote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="Upvote"
+                    android:textColor="@color/orange"
+                    android:textSize="12dp" />
+
+
+                <ImageView
+                    android:id="@+id/upVoteImage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:paddingLeft="1sp"
+                    android:background="@drawable/upvote" />
+
+                <TextView
+                    android:id="@+id/upVoteCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="5dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/dividerView3"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/light_gray"
+                />
+
+            <LinearLayout
+                android:id="@+id/commentsLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="comments"
+                    android:textColor="@color/blue1"
+                    android:textSize="12dp" />
+
+
+                <ImageView
+                    android:id="@+id/commentImage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:paddingLeft="1sp"
+                    android:paddingTop="4dp"
+                    android:src="@drawable/comment_icon" />
+
+                <TextView
+                    android:id="@+id/commentCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="5dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/NoCommentsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="No comment available."/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_layout"
+        android:scrollbars="none"
+        android:overScrollMode="never"/>
+
+
+<!--
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+       >
+
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="3"
+            android:background="@null"
+            android:hint="Enter message"
+            android:textColorHint="@color/grey"
+            android:lines="1"
+            android:textColor="@color/grey"
+            android:paddingLeft="10dp" />
+
+
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SEND"
+            android:background="#99CC00"
+            android:textColor="#fff"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:src="@drawable/plus"
+        app:fabSize="normal" />
+
+
+
+</RelativeLayout>

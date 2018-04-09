@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/test_analytics_course_topic_table_row_height"
+    android:layout_marginBottom="@dimen/test_analytics_course_list_divider_height"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/test_analytics_course_topic_table_row_padding"
+    android:weightSum="435" >
+
+    <TextView
+        android:id="@+id/assignment_course_topic_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="260"
+        android:gravity="center_vertical"
+        android:text="@string/dummy_sub"
+        android:textColor="@color/darkergrey"
+        android:textSize="@dimen/test_analytics_course_topic_name_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/assignment_course_topic_marks_scored"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="75"
+        android:gravity="center"
+        android:text="@string/dummy_number"
+        android:textColor="@color/darkergrey"
+        android:textSize="@dimen/test_analytics_course_topic_marks_scored_text_size" />
+
+    <TextView
+        android:id="@+id/assignment_course_topic_attempted_question_count"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="100"
+        android:gravity="center"
+        android:text="@string/dummy_number"
+        android:textColor="@color/darkergrey"
+        android:textSize="@dimen/test_analytics_course_topic_marks_scored_text_size" />
+
+</LinearLayout>

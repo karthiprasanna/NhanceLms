@@ -1,0 +1,19 @@
+<resources>
+
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+
+    <!-- test lnadscape view analytics -->
+    <dimen name="test_analytics_score_padding_top">25dp</dimen>
+    <dimen name="test_analytics_score_padding_bottom">50dp</dimen>
+    <dimen name="test_analytics_score_padding_left">12dp</dimen>
+    <dimen name="test_analytics_score_padding_right">28dp</dimen>
+    <dimen name="test_analytics_question_info_padding_right">18dp</dimen>
+    
+    <dimen name="test_analytics_container_height">260dp</dimen>
+
+    
+    <!-- overall analytics page -->
+    <dimen name="overall_analytics_course_list_item_padding_left">12dp</dimen>
+    <dimen name="overall_analytics_test_list_item_padding_right">7dp</dimen>
+    <dimen name="overall_analytics_test_list_item_padding_left">14dp</dimen>
+</resources>

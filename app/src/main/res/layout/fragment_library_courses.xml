@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F5FA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/vcode_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/qr_code_scanner_margin"
+        android:background="@drawable/selector_darkergrey"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/qr_code_scanner_height"
+            android:drawableLeft="@drawable/qr_code_image"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="@string/scan_qr_code"
+            android:textColor="@color/white"
+            android:textSize="@dimen/qr_code_scanner_text_size" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/library_course_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/vcode_scanner"
+        android:paddingBottom="@dimen/qr_code_scanner_height">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/library_courses_no_section_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="75dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView style="@style/sad_smiley_img" />
+
+                <TextView
+                    style="@style/sad_smiley_text"
+                    android:text="@string/not_part_of_sections"></TextView>
+
+                <Button
+                    android:id="@+id/take_to_all_programs_from_courses_page"
+                    android:layout_width="170dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/green"
+                    android:text="@string/join_program"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/library_courses_sync_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="75dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/ibrary_courses_sync_progress_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:indeterminate="true"
+                    android:indeterminateBehavior="repeat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/library_courses_heading_side_margin"
+                    android:paddingRight="@dimen/library_courses_heading_side_margin"
+                    android:text="@string/syncing_content"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/library_courses_main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/library_courses_select_program_margin_bottom"
+                    android:layout_marginLeft="@dimen/library_courses_heading_side_margin"
+                    android:layout_marginTop="@dimen/library_courses_select_program_margin_top"
+                    android:text="@string/select_a_program"
+                    android:textAllCaps="true"
+                    android:textColor="@color/darkergrey"
+                    android:textSize="@dimen/library_courses_heading_font_size"
+                    android:textStyle="bold"></TextView>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/library_courses_heading_side_margin">
+
+                    <Spinner
+                        android:id="@+id/library_sections_filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:dropDownWidth="wrap_content"
+                        android:prompt="@string/library_info_pop_up_courses"></Spinner>
+
+                    <TextView
+                        android:id="@+id/tv_course"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/library_courses_choose_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/library_choose_course_margin_bottom"
+                    android:layout_marginLeft="@dimen/library_courses_heading_side_margin"
+                    android:layout_marginTop="@dimen/library_choose_course_margin_top"
+                    android:text="@string/choose_a_course"
+                    android:textAllCaps="true"
+                    android:textColor="@color/darkergrey"
+                    android:textSize="@dimen/library_courses_heading_font_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/library_courses_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/library_course_side_margin"
+                    android:layout_marginRight="@dimen/library_course_side_margin"
+                    android:orientation="vertical"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/no_courses_in_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/no_courses_in_section"
+                    android:textColor="@color/darkergrey"
+                    android:textSize="@dimen/library_courses_heading_font_size"
+                    android:visibility="gone"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

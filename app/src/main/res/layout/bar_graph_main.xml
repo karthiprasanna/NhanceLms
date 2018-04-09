@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/bar_graph_line_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/bar_graph_margin_bottom"
+        android:orientation="vertical"></LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/bar_graph_margin_bottom"
+        android:background="@color/darkergrey"></View>
+
+    <LinearLayout
+        android:id="@+id/bar_graph_bars_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/bar_graph_margin_bottom"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/bar_graph_holder_pad_left"
+        android:paddingRight="@dimen/bar_graph_holder_pad_left"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/bar_graph_holder_pad_left"
+        android:paddingRight="@dimen/bar_graph_holder_pad_left">
+
+        <LinearLayout
+            android:id="@+id/bar_graph_values_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"></LinearLayout>
+
+        <TextView
+            android:id="@+id/bar_graph_xAxis_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/bar_graph_xAxis_title_margin_top"
+            android:gravity="center_horizontal"
+            android:text="@string/dummy_char"
+            android:textColor="@color/white"
+            android:textSize="@dimen/bar_graph_xAxis_title_font_size" />
+    </LinearLayout>
+</RelativeLayout>

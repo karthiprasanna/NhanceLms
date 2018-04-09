@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\android\.gradle\caches\modules-2\files-2.1\com.madgag\scprov-jdk15on\1.47.0.3\a1ff8a74a7013c4ada7e4d20d335b302d147ddd1\scprov-jdk15on-1.47.0.3.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="a1ff8a74a7013c4ada7e4d20d335b302d147ddd1">
+        <dex dex="E:\Satya\mobileapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\scprov-jdk15on-1.47.0.3_befd151955f99a43bead32b04238c37c8c7ebdec\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\android\.gradle\caches\modules-2\files-2.1\org.jsoup\jsoup\1.10.1\645f1ad2f6f4cbad1cde4c483eae71e4051be6ef\jsoup-1.10.1.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="645f1ad2f6f4cbad1cde4c483eae71e4051be6ef">
+        <dex dex="E:\Satya\mobileapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\jsoup-1.10.1_e11d64bfcef8491473ce0721d8733d935edfd1a9\classes.dex" />
+    </item>
+    <item
+        jar="E:\Satya\mobileapp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="bf4e8a823df56cb4dc2c5fe711ad8cb59afa49a6">
+        <dex dex="E:\Satya\mobileapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_e9fa6507932fddfea8011904a071360a1a6cda21\classes.dex" />
+    </item>
+    <item
+        jar="E:\Satya\mobileapp\app\libs\httpcore-4.3.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="8dfd6286d04ad9dbf26cdf7d4ef5c8fad430cf30">
+        <dex dex="E:\Satya\mobileapp\app\build\intermediates\transforms\dex\debug\folders\1000\2\httpcore-4.3_cf616343003965c28c31e12cdca355b126fe2647\classes.dex" />
+    </item>
+    <item
+        jar="E:\Satya\mobileapp\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="E:\Satya\mobileapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_b366282b1912586dad9bc72ae7af6b2170a83447\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\android\.gradle\caches\modules-2\files-2.1\com.itextpdf\itextg\5.5.10\247811bfc4d8f4e99c909236eadf4dfc6dfa1615\itextg-5.5.10.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="247811bfc4d8f4e99c909236eadf4dfc6dfa1615">
+        <dex dex="E:\Satya\mobileapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\itextg-5.5.10_b66266868c8e502068e96b6c6e1ede6972830353\classes.dex" />
+    </item>
+    <item
+        jar="E:\Satya\mobileapp\app\libs\libGoogleAnalyticsServices.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="e887c6c9b31b39a39b0eaba981448b78902ea813">
+        <dex dex="E:\Satya\mobileapp\app\build\intermediates\transforms\dex\debug\folders\1000\2\libGoogleAnalyticsServices_2c88026eb74823276a100aadca0c9867c1faa8e3\classes.dex" />
+    </item>
+    <item
+        jar="E:\Satya\mobileapp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="33ed55784ec34edd6c3c7f41fe467fd43e63487d">
+        <dex dex="E:\Satya\mobileapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_715629bd9591156d5ac85a877e893b2c893e5107\classes.dex" />
+    </item>
+    <item
+        jar="E:\Satya\mobileapp\app\libs\httpmime-4.3-beta2.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="16cd767e728b8cfe9af84f922c2d86b5aa91f76f">
+        <dex dex="E:\Satya\mobileapp\app\build\intermediates\transforms\dex\debug\folders\1000\2\httpmime-4.3-beta2_4460e66fae18eb6b91da16b4b4b4edd7b1945324\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\android\.gradle\caches\modules-2\files-2.1\commons-lang\commons-lang\2.6\ce1edb914c94ebc388f086c6827e8bdeec71ac2\commons-lang-2.6.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="0ce1edb914c94ebc388f086c6827e8bdeec71ac2">
+        <dex dex="E:\Satya\mobileapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\commons-lang-2.6_503d10087f063f78aa79e19e25de1b130ece21ee\classes.dex" />
+    </item>
+    <item
+        jar="E:\Satya\mobileapp\app\build\intermediates\exploded-aar\com.actionbarsherlock\actionbarsherlock\4.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="af64527b748983a75de9c0756e9768b56b240a49">
+        <dex dex="E:\Satya\mobileapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.actionbarsherlock-actionbarsherlock-4.4.0_f80e062929e54d35f2e224704ead970e8a0c3bc8\classes.dex" />
+    </item>
+    <item
+        jar="D:\adt-bundle-windows-x86_64-20140702\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="E:\Satya\mobileapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.2.0_c4b5f6c6ed6681e37e928d96fb04ede92e9e2591\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\android\.gradle\caches\modules-2\files-2.1\com.madgag\sc-light-jdk15on\1.47.0.3\ee5043d8e50e46b0daca4e798f52d7532c27b0c4\sc-light-jdk15on-1.47.0.3.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="ee5043d8e50e46b0daca4e798f52d7532c27b0c4">
+        <dex dex="E:\Satya\mobileapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\sc-light-jdk15on-1.47.0.3_fdf51dc6f0375e59baad7a797d42e7fe7562b393\classes.dex" />
+    </item>
+    <item
+        jar="E:\Satya\mobileapp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="E:\Satya\mobileapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.2.0_9cdf632bac32bab31dc1c909d56bbc4604189d7c\classes.dex" />
+    </item>
+    <item
+        jar="E:\Satya\mobileapp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="E:\Satya\mobileapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-22.2.0_a08af50450b27f9ea8283dd3e8290eebe8cf6867\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\android\.gradle\caches\modules-2\files-2.1\com.madgag\scpkix-jdk15on\1.47.0.3\5a2856bb520c462a474802b73f12a81be4cfd200\scpkix-jdk15on-1.47.0.3.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="5a2856bb520c462a474802b73f12a81be4cfd200">
+        <dex dex="E:\Satya\mobileapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\scpkix-jdk15on-1.47.0.3_1da1342e15010d1fb892b6d2700df0f2aaa5f314\classes.dex" />
+    </item>
+
+</items>

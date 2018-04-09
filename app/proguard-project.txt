@@ -1,0 +1,84 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+
+-dontwarn android.support.** 
+-dontwarn org.apache.**
+-dontwarn org.spongycastle.**
+-dontwarn com.itextpdf.**
+-dontwarn com.actionbarsherlock.**
+ 
+-keep class org.apache.** {*;}
+-keep class com.actionbarsherlock.** {*;}
+-keep class org.spongycastle.** {*;}
+-keep class com.itextpdf.** {*;}
+-keep class com.google.play.**
+
+
+-optimizations !code/simplification/arithmetic,!code/simplification/cast,!field/*,!class/merging/*,!code/allocation/variable
+
+-keep class * extends android.app.Service {*;}
+
+-keep class * extends android.content.BroadcastReceiver {*;}
+
+-keep class com.nhance.android.activities.* {*;}
+
+-assumenosideeffects class android.util.Log {
+#    public static boolean isLoggable(java.lang.String, int);
+     public static int v(...);
+#    public static int i(...);
+#    public static int w(...);
+     public static int d(...);
+#    public static int e(...);
+}
+
+-keepclassmembers class * extends com.nhance.android.jsinterfaces.AbstractJSInterface {
+   public *;
+}
+
+-keep public class com.nhance.android.db.**
+
+-keepnames class com.nhance.android.db.models.**
+
+-keepclassmembers class com.nhance.android.db.models.** {*;}
+
+-keepnames enum com.nhance.android.enums.**
+
+-keepclassmembers enum com.nhance.android.enums.** {*;}
+
+-keepnames class com.nhance.android.pojos.**
+
+-keepclassmembers class com.nhance.android.pojos.** {*;}
+
+-keepnames class com.nhance.android.utils.server.**
+-keepclassmembers class com.nhance.android.utils.server.** {*;}
+
+#-keep public class com.nhance.android.utils.server.NanoHTTPD
+#-keepclassmembers class com.nhance.android.utils.server.NanoHTTPD{*;}
+#-keep class * extends com.nhance.android.utils.server.NanoHTTPD {*;}
+
+-keep class com.android.vending.billing.**
+-dontnote **ILicensingService
+-dontnote android.support.** 
+-dontnote org.apache.**
+-dontnote org.spongycastle.**
+-dontnote com.itextpdf.**
+-dontnote com.actionbarsherlock.**
+-dontnote com.google.play.**
+
+
+

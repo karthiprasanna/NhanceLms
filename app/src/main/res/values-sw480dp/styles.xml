@@ -1,0 +1,23 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="sad_smiley_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/darkgrey</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="sad_smiley_text_small" parent="sad_smiley_text">
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "71195929599",
+    "firebase_url": "https://gaosftfcm.firebaseio.com",
+    "project_id": "gaosftfcm",
+    "storage_bucket": "gaosftfcm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71195929599:android:526692a184f3cb34",
+        "android_client_info": {
+          "package_name": "com.example.administrator.gasoftfcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "71195929599-be1si6o1dqndtb3ug28t1kfmr4h33rj6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLKSC2sYFHRshZ8Q-BW4-V3fTwfD7oUzE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71195929599:android:348046f118752d56",
+        "android_client_info": {
+          "package_name": "com.nhance.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "71195929599-be1si6o1dqndtb3ug28t1kfmr4h33rj6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLKSC2sYFHRshZ8Q-BW4-V3fTwfD7oUzE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

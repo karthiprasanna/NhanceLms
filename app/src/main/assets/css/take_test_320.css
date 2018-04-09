@@ -1,0 +1,75 @@
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+
+#quesBody {
+	color: #333333;
+	font-size: 18px;
+	padding: 16px 15px;
+	line-height: 35px;
+}
+
+#quesOpts {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#quesOpts td {
+	vertical-align: middle;
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	color: #333333;
+}
+
+#quesOpts td:first-child {
+	background-color: #DDDDDD;
+	font-size: 20px;
+	font-weight: bold;
+	width: 50px;
+	padding: 15px 9px;
+	text-align: center;
+}
+
+.quesOptNum {
+	display: inline-block;
+	background-color: #FFFFFF;
+	padding: 7px 13px;
+	border-radius: 3px;
+}
+
+#quesOpts td:last-child {
+	font-size: 18px;
+	padding: 12px 14px;
+	background-color: #EEEEEE;
+}
+#quesOpts .quesOptActive td:first-child {
+	background-color: rgb(153, 204, 0);
+}
+
+#quesOpts .quesOptActive td:last-child {
+	background-color: rgba(153, 204, 0, 0.3);
+}
+
+#numericAnsBlock {
+	background-color: #EEEEEE;
+	border-top: 1px solid #CCCCCC;
+	padding: 20px;
+}
+
+#numericAnsTextBox, #numericDummyAnsBox {
+	border: 1px solid #CCCCCC;
+	padding: 8px 3px;
+	width: 80%;
+}
+
+#numericDummyAnsBox {
+	background-color: #FFFFFF;
+}
+.RTEImageDiv img{
+ display: block;
+ max-width:150px;
+ max-height:150px;
+ width: 150px;
+ height: 150px;
+ }

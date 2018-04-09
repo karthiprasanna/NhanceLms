@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+
+        android:gravity="center|left"
+        android:layout_toRightOf="@+id/position"
+        android:id="@+id/ass_solution"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/test_rank_list_item_block_size"
+        android:background="@drawable/rounded_corner2"
+        android:paddingBottom="@dimen/test_rank_list_item_rank_info_padding_bottom"
+        android:paddingLeft="@dimen/test_rank_list_item_rank_info_padding_left"
+        android:paddingRight="@dimen/test_rank_list_item_rank_info_padding_right"
+        android:layout_margin="10dp"
+        android:paddingTop="@dimen/test_rank_list_item_rank_info_padding_top" >
+
+
+
+
+
+
+        <TextView
+            android:textSize="@dimen/assignmet_text_size"
+            android:textColor="@color/orange"
+            android:id="@+id/ass_questiontype"
+            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/type_caps"/>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/ass_questiontype"
+            android:textSize="@dimen/assignmet_text_size"
+            android:textColor="@color/slpdarkgreen"
+            android:id="@+id/ass_attempt_btn"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Attempt"/>
+
+
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_below="@+id/ass_solution"
+        android:layout_above="@+id/attmpt_status"
+        android:layout_margin="5dp"
+        android:id="@+id/framlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom|center_horizontal"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:textSize="@dimen/assignmet_text_size"
+        android:layout_above="@id/lin_youranswer"
+        android:text="Not Attempted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/attmpt_status"/>
+
+    <LinearLayout
+
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:layout_above="@+id/submit_cancel"
+        android:visibility="gone"
+        android:id="@+id/lin_youranswer"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            />
+
+        <LinearLayout
+            android:background="@color/white"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                />
+
+            <LinearLayout
+                android:id="@+id/upVOteLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center">
+
+                <TextView
+                    android:textSize="@dimen/assignmet_text_size"
+                    android:id="@+id/upVote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/youranswer"
+                    android:textColor="@color/blue"
+                    />
+
+
+
+                <TextView
+                    android:textSize="@dimen/assignmet_text_size"
+                    android:id="@+id/ass_uranswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:textColor="@color/blue"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                />
+
+            <LinearLayout
+                android:id="@+id/commentsLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:textSize="@dimen/assignmet_text_size"
+                    android:id="@+id/comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/correctanswer"
+
+                    android:textColor="@color/green"
+                    />
+
+
+
+                <TextView
+                    android:textSize="@dimen/assignmet_text_size"
+                    android:id="@+id/ass_crtanser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:text="0"
+                    android:textColor="@color/green"
+                    />
+
+            </LinearLayout>
+            <View
+                android:id="@+id/dividerView4"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            />
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript"
+	src="file:///android_asset/js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">
+	var filePath = "file:///android_asset/css/";
+	function loadDimensionFiles(dimension) {
+		var filename = filePath + "take_test_" + dimension + ".css";
+		var fileref = document.createElement("link")
+		fileref.setAttribute("rel", "stylesheet")
+		fileref.setAttribute("type", "text/css")
+		fileref.setAttribute("href", filename)
+		document.getElementsByTagName("head")[0].appendChild(fileref);
+	};
+</script>
+<style type="text/css">
+body {
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+</style>
+</head>
+<body ontouchstart="">
+	<div id="ques">
+		<div id="quesBody"></div>
+		<table id="quesOpts" cell-spacing="0" style="display: none">
+			<tbody></tbody>
+		</table>
+		<div id="numericAnsBlock" style="display: none">
+			<input type="text" id="numericAnsTextBox" style="display: none;" />
+			<div id="numericDummyAnsBox" style="display: none;"></div>
+		</div>
+	</div>
+	<div id='htmlDecode' style="display: none;"></div>
+
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			extensions : [ "tex2jax.js" ],
+			jax : [ "input/TeX", "output/HTML-CSS" ],
+			tex2jax : {
+				displayMath : [],
+				inlineMath : [ [ '$$', '$$' ], [ "\\[", "\\]" ], [ '$', '$' ],
+						[ "\\(", "\\)" ] ],
+				processEscapes : true
+			},
+			TeX : {
+				extensions : [ "AMSmath.js", "AMSsymbols.js", "noErrors.js",
+						"noUndefined.js" ]
+			},
+			"HTML-CSS" : {
+				linebreaks : {
+					automatic : true
+				},
+				scale : 100
+			},
+			messageStyle: "none",
+			showMathMenu: false
+		});
+	</script>
+	<script type="text/javascript"
+		src="file:///android_asset/js/MathJax/MathJax.js">
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/library_info_top_bar_margin_bottom"
+        android:background="@color/morelightergrey"
+        android:paddingLeft="@dimen/popup_side_padding" >
+
+        <ImageView
+            android:id="@+id/close_payment_info_popup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/popup_cross_margin_right"
+            android:layout_marginTop="@dimen/popup_cross_margin_top"
+            android:background="@drawable/selector_blue_onpress"
+            android:contentDescription="@string/close"
+            android:padding="@dimen/popup_cross_padding"
+            android:src="@drawable/cross" />
+
+        <TextView
+            android:id="@+id/star_this_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/popup_cross_padding"
+            android:text="@string/transaction_info"
+            android:textAllCaps="true"
+            android:textColor="@color/darkergrey"
+            android:textSize="@dimen/payment_info_head_font_size"
+            android:textStyle="bold" >
+        </TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/profile_stats_vertical_padding"
+        android:paddingLeft="@dimen/profile_stats_side_padding"
+        android:paddingRight="@dimen/profile_stats_side_padding"
+        android:paddingTop="@dimen/profile_stats_vertical_padding" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/profile_stat_margin_bottom"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/my_program_popup_details_head"
+                android:text="@string/payment_order_id" />
+
+            <TextView
+                android:id="@+id/transaction_order_id"
+                style="@style/my_program_popup_details_head_value"
+                android:text="@string/dummy_number" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/my_program_popup_details_head"
+            android:text="@string/payment_communication_email" />
+
+        <EditText
+            android:id="@+id/transaction_email"
+            style="@style/my_program_popup_details_head_value"
+            android:hint="@string/payment_communication_email"
+            android:inputType="textEmailAddress" />
+
+        <Button
+            android:id="@+id/proceed_transaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/profile_stats_vertical_padding"
+            android:background="@drawable/selector_green_bg"
+            android:paddingLeft="@dimen/profile_stats_side_padding"
+            android:paddingRight="@dimen/profile_stats_side_padding"
+            android:text="@string/transaction_proceed" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightestgrey"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/popup_side_padding"
+                android:text="@string/estric" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/payment_info_contact_vertical_padding"
+                android:paddingLeft="@dimen/popup_side_padding"
+                android:paddingRight="@dimen/popup_side_padding"
+                android:paddingTop="@dimen/payment_info_contact_vertical_padding"
+                android:text="@string/payment_process_warning"
+                android:textColor="@color/darkgrey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/popup_side_padding"
+                android:text="@string/estric" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/payment_info_contact_vertical_padding"
+                android:paddingLeft="@dimen/popup_side_padding"
+                android:paddingRight="@dimen/popup_side_padding"
+                android:text="@string/for_payment_queries"
+                android:textColor="@color/darkgrey" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

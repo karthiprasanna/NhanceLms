@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/doubt_facet_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/doubt_nav_item_margin_top"
+    android:textColor="@color/white_trans_90"
+    android:textSize="@dimen/doubt_nav_item_text_size"
+    android:drawablePadding="@dimen/doubt_nav_item_drawable_padding"
+    android:paddingLeft="@dimen/doubt_nav_item_pad_left"
+    android:paddingRight="@dimen/doubt_nav_item_pad_right"
+    android:ellipsize="end"
+    >
+</TextView>

@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red"
+    android:paddingBottom="@dimen/login_padding_bottom"
+    android:paddingTop="@dimen/login_padding_top" >
+
+    <LinearLayout
+        android:id="@+id/login_page_tracker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/login_tracker_margin_top"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/login_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/login_page_tracker"
+        android:paddingLeft="@dimen/login_side_margin"
+        android:paddingRight="@dimen/login_side_margin" >
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

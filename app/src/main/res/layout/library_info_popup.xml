@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lightestgrey"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/popup_side_padding" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/library_info_top_bar_margin_bottom" >
+
+                <ImageView
+                    android:id="@+id/close_library_info_popup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/popup_cross_margin_right"
+                    android:layout_marginTop="@dimen/popup_cross_margin_top"
+                    android:background="@drawable/selector_blue_onpress"
+                    android:contentDescription="@string/close"
+                    android:padding="@dimen/popup_cross_padding"
+                    android:src="@drawable/cross_alert" />
+
+                <TextView
+                    android:id="@+id/star_this_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/popup_cross_padding"
+                    android:drawableLeft="@drawable/star"
+                    android:drawablePadding="@dimen/library_popup_star_drawable_padding"
+                    android:gravity="center_vertical"
+                    android:text="@string/star"
+                    android:textAllCaps="true"
+                    android:textColor="@color/darkergrey"
+                    android:textSize="@dimen/library_popup_star_font_size" >
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/library_popup_title_sec_margin_bottom"
+                android:layout_marginRight="@dimen/popup_side_padding"
+                android:layout_marginTop="@dimen/library_popup_title_sec_margin_top" >
+
+                <ImageView
+                    android:id="@+id/library_info_popup_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/library_popup_image_margin_right"
+                    android:layout_marginTop="@dimen/library_popup_image_margin_top"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_assignment" />
+
+                <TextView
+                    android:id="@+id/library_info_popup_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/library_info_popup_image"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="akjsdgh jhsdg jhsdgv d"
+                    android:textColor="@color/darkergrey"
+                    android:textSize="@dimen/popup_title_font_size" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/library_info_popup_stats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/library_info_popup_title"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@id/library_info_popup_image"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="@dimen/library_popup_stats_font_size" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/library_info_popup_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/library_info_popup_stats"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@id/library_info_popup_image"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/darkblue"
+                    android:textSize="@dimen/library_popup_author_font_size" />
+
+                <TextView
+                    android:id="@+id/library_info_popup_sdcard_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/library_info_popup_author"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@id/library_info_popup_image"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="@dimen/library_popup_author_font_size" 
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/popup_side_padding"
+            android:paddingRight="@dimen/popup_side_padding"
+            android:paddingTop="@dimen/library_popup_metadata_padding_top" >
+
+            <TextView
+                android:id="@+id/library_info_popup_last_opened"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/library_popup_opened_margin_bottom"
+                android:textColor="@color/darkergrey"
+                android:textSize="@dimen/popup_normal_text_font_size"
+                android:visibility="gone" >
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/library_info_popup_courses_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/library_info_popup_module_run"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkergrey"
+                android:textSize="@dimen/popup_normal_text_font_size"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/library_popup_divider_vertical_margin"
+                android:layout_marginTop="@dimen/library_popup_divider_vertical_margin"
+                android:background="@color/morelightergrey" >
+            </View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/library_popup_actions_margin_bottom" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/open_library_popup_item"
+                        style="@style/popup_small_text_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/btn_rounded_corner"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/open"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/status_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/online"
+                        android:background="@drawable/btn_rounded_corner"
+
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/popup_buttons_common_font_size"
+                        android:visibility="gone" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/library_info_popup_download_btn"
+                        style="@style/popup_big_text_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/remove_btn_rounded_corner"
+                        android:gravity="center"
+                        android:text="@string/download_to_device"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        android:id="@+id/start_download_loading"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/library_info_popup_download_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:max="100"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" >
+                        </ProgressBar>
+
+                        <TextView
+                            android:id="@+id/progress_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="@dimen/library_popup_progress_text_margin" />
+
+                        <TextView
+                            android:id="@+id/library_info_popup_cancel_download_btn"
+                            style="@style/popup_big_text_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/remove_btn_rounded_corner"
+
+                            android:gravity="center"
+                            android:text="@string/cancel_download"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

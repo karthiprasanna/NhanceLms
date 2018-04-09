@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5FA"
+
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F5F5FA"
+        android:orientation="vertical" >
+        <android.support.v7.widget.CardView android:id="@+id/card_view"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="5dp"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/test_pre_stats_vertical_padding"
+            android:paddingTop="@dimen/test_pre_stats_vertical_padding" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:gravity="center"
+                android:orientation="vertical" >
+                <TextView
+                    style="@style/test_pre_stats_text"
+                    android:text="@string/marks_caps" />
+
+                <TextView
+                    android:textColor="@color/darkyellow"
+                    android:id="@+id/test_pre_marks"
+                    style="@style/test_pre_stats_number" />
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/grey" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:gravity="center"
+                android:orientation="vertical" >
+                <TextView
+                    style="@style/test_pre_stats_text"
+                    android:text="@string/questions_caps" />
+                <TextView
+                    android:textColor="@color/grey"
+                    android:id="@+id/test_pre_questions"
+                    style="@style/test_pre_stats_number" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/grey" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.34"
+                android:gravity="center"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/test_pre_duration_string"
+                    style="@style/test_pre_stats_text"
+                    android:text="@string/hours_caps" />
+                <TextView
+                    android:textColor="@color/green"
+                    android:id="@+id/test_pre_duration"
+                    style="@style/test_pre_stats_number"
+                    android:text="00:00" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/test_pre_subjects_head_margin_bottom"
+            android:layout_marginLeft="@dimen/test_pre_common_side_margin"
+            android:layout_marginTop="@dimen/test_pre_subjects_head_margin_top"
+            android:text="@string/subjects_caps"
+            android:textColor="@color/black"
+            android:textSize="@dimen/test_pre_subjects_head_font_size"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:padding="5dp"
+            android:id="@+id/test_pre_subjects_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/test_pre_subjects_holder_margin_bottom"
+            android:layout_marginLeft="@dimen/test_pre_common_side_margin"
+            android:layout_marginRight="@dimen/test_pre_common_side_margin"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

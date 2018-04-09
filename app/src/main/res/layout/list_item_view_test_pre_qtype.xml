@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+
+    android:background="@color/white"
+    android:orientation="horizontal" >
+<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="3dp"
+    card_view:cardElevation="4dp"
+    android:layout_marginTop="7dp">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/test_pre_qtype"
+        style="@style/test_pre_subject_ques_types_value"
+        android:layout_weight="0.34"
+        android:paddingLeft="@dimen/test_pre_subject_ques_types_head_side_padding" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.38"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/test_pre_qtype_postive_marks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/test_pre_subject_ques_types_value_number_font_size" />
+
+        <TextView
+            android:id="@+id/test_pre_qtype_negative_marks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:textSize="@dimen/test_pre_subject_ques_types_value_number_font_size"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/test_pre_qtype_questions"
+        style="@style/test_pre_subject_ques_types_value"
+        android:layout_weight="0.28"
+        android:gravity="center"
+        android:paddingRight="@dimen/test_pre_subject_ques_types_head_side_padding"
+        android:textSize="@dimen/test_pre_subject_ques_types_value_number_font_size" />
+
+</LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

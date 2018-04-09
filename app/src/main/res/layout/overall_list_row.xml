@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:padding="2dp"
+    android:orientation="horizontal" >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/test_rank_list_item_block_size"
+        android:background="@drawable/rounded_corner2"
+        android:paddingBottom="@dimen/test_rank_list_item_rank_info_padding_bottom"
+        android:paddingLeft="@dimen/test_rank_list_item_rank_info_padding_left"
+        android:paddingRight="@dimen/test_rank_list_item_rank_info_padding_right"
+        android:layout_marginLeft="2dp"
+        android:paddingTop="@dimen/test_rank_list_item_rank_info_padding_top" >
+
+        <TextView
+            android:id="@+id/overall"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/custom_shape_leaderboard_overall"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/test_rank_list_item_rank_text_size"
+            android:textStyle="bold" />
+
+        />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/overall"
+            android:background="#009E9F" />
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/overall_user_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/test_rank_list_item_rank_info_padding_left"
+            android:layout_toRightOf="@+id/overall"
+            android:contentDescription="@string/img"
+            android:src="@drawable/profile"
+            app:civ_border_color="@color/light_gray"
+            app:civ_border_width="2dp" />
+
+
+
+        <TextView
+            android:id="@+id/overall_user_fname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/overall_user_image"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="@dimen/test_rank_list_item_rank_user_name_max_width"
+            android:text="@string/dummy_sub"
+            android:textAllCaps="true"
+            android:textColor="@color/darkestgrey"
+            android:textSize="@dimen/test_rank_list_item_rank_user_fname_size" />
+
+        <TextView
+            android:id="@+id/overall_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/overall_user_fname"
+            android:layout_toRightOf="@id/overall_user_image"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="@dimen/test_rank_list_item_rank_user_name_max_width"
+            android:text="@string/dummy_sub"
+            android:textAllCaps="true"
+            android:textColor="@color/red"
+            android:textSize="@dimen/test_rank_list_item_rank_user_lname_size" />
+
+    </RelativeLayout>
+
+</LinearLayout>

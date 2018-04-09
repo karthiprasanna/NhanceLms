@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/test_pre_subject_topic_margin_bottom"
+    android:ellipsize="end"
+    android:singleLine="true"
+    android:textColor="@color/darkgrey"
+    android:textSize="@dimen/test_pre_subject_topic_font_size" />

@@ -1,0 +1,23 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:paddingLeft="4dp"
+android:layout_marginTop="5dp"
+android:orientation="vertical"
+    >
+
+
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/test_answer_course_list_item_qus_ans_box_size"
+    android:layout_height="@dimen/test_answer_course_list_item_qus_ans_box_size"
+    android:gravity="center"
+    android:id="@+id/text_grid_item_title"
+    android:text="@string/dummy_number"
+    android:textColor="@color/white"
+    android:textSize="@dimen/test_answer_course_list_item_qus_ans_box_text_size" >
+
+</TextView>
+
+</LinearLayout>

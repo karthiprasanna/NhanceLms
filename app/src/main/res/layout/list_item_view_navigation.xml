@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/selector_black_on_press"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/navigation_item_vertical_padding"
+        android:paddingLeft="@dimen/navigation_common_side_padding"
+        android:paddingRight="@dimen/navigation_common_side_padding"
+        android:paddingTop="@dimen/navigation_item_vertical_padding" >
+
+        <ImageView
+            android:id="@+id/navigation_item_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/navigation_item_drawable_padding"
+            android:contentDescription="@string/img" />
+
+        <TextView
+            android:id="@+id/navigation_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/navigation_item_img"
+            android:text="@string/library"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/navigation_item_font_size" >
+        </TextView>
+        <TextView
+            android:id="@+id/menurow_counter"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_toRightOf="@+id/navigation_item_name"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:text="00"
+            />
+
+        <ImageView
+            android:id="@+id/navigation_item_right_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/img"
+            android:src="@drawable/navigation_next_item_white"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/navigation_item_border_side_margin"
+        android:layout_marginRight="@dimen/navigation_item_border_side_margin"
+        android:background="@color/darkergrey" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/navigation_item_border_side_margin"
+        android:layout_marginRight="@dimen/navigation_item_border_side_margin"
+        android:background="@color/black" />
+
+</LinearLayout>

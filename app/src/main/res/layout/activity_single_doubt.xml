@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightestgrey"
+    tools:context=".SingleDoubtActivity" >
+	
+    <TextView
+            android:id="@+id/single_doubt_progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/doubts_loading_font_size"
+            android:textColor="#999999"
+            android:background="@color/lightestgrey"
+            android:layout_marginTop="40dp"
+            android:text="@string/loading_doubts"
+            android:visibility="visible"
+            android:gravity="center"/>
+    
+	<WebView
+	    android:id="@+id/single_doubt_container"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" 
+	    android:background="@color/lightestgrey"
+	    />
+</RelativeLayout>

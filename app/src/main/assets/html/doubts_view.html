@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css"
+	href="file:///android_asset/css/doubts.css">
+<script type="text/javascript">
+   const filePath = "file:///android_asset/css/";
+   function loadCssFile(filename){
+	var fileref=document.createElement("link")
+	fileref.setAttribute("rel", "stylesheet")
+	fileref.setAttribute("type", "text/css")
+	fileref.setAttribute("href", filename)
+	document.getElementsByTagName("head")[0].appendChild(fileref)
+   }
+   function loadDimensionFile(dimens){
+	const filename = filePath+"doubts_"+dimens+".css";
+	loadCssFile(filename);	
+   }
+</script>
+<script type="text/javascript"
+	src="file:///android_asset/js/jquery-1.8.1.min.js"></script>
+</head>
+<body ontouchstart="">
+	<div id="doubtsHolder"></div>
+	<div id='doubtSampleParent' style="display: none;">
+		<div class="doubt">
+		   <table cellspacing=0 cellpadding=0>
+		     <tr>
+			<td class="doubtImgTd alignTop">
+				<img src="" class="doubtUserImg" />
+			</td>
+			<td class="doubtMainSec alignTop">
+				<div class="doubtByDiv">
+					<span class="doubtBy alignTop"></span>
+					<span class="doubtTime alignTop"></span>
+				</div>
+				<div class="doubtTitle"></div>
+				<div class="doubtBody">
+				</div>
+				<!--<div class="doubtTags"></div>-->
+				<div class="doubtStatSec">
+				   <span class="doubtAnsCountDiv">
+					<span class="doubtAnsCount">0</span>
+					<span>Answers</span>
+				   </span>
+				   <span class="doubtFollowerCountDiv">
+					<span class="doubtFollowerCount">0</span>
+					<span>Followers</span>
+				   </span>
+				</div>			
+			</td>
+		     </tr>
+		   </table>
+		</div>
+	</div>
+	<script type="text/javascript" src="file:///android_asset/js/timeago.js"></script>
+	<script type="text/javascript" src="file:///android_asset/js/doubts.js"></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			extensions : [ "tex2jax.js" ],
+			jax : [ "input/TeX", "output/HTML-CSS" ],
+			tex2jax : {
+				displayMath : [],
+				inlineMath : [ [ '$$', '$$' ], [ "\\[", "\\]" ], [ '$', '$' ],
+						[ "\\(", "\\)" ] ],
+				processEscapes : true
+			},
+			TeX : {
+				extensions : [ "AMSmath.js", "AMSsymbols.js", "noErrors.js",
+						"noUndefined.js" ]
+			},
+			"HTML-CSS" : {
+				linebreaks : {
+					automatic : true
+				},
+				scale : 100
+			},
+			messageStyle: "none",
+			showMathMenu: false
+		});
+	</script>
+	<script type="text/javascript"
+		src="file:///android_asset/js/MathJax/MathJax.js">
+	</script>
+</body>
+</html>

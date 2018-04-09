@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/profile_name"
+    android:textColor="@color/white"
+    android:textSize="@dimen/profile_user_prog_sec_font_size"
+    android:textStyle="bold" >
+
+</TextView>

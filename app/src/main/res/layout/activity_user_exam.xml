@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  android:padding="10dp"
+    tools:context="com.nhance.android.QuestionCount.SingleExamActivity">
+
+    <RelativeLayout
+        android:id="@+id/content_student_performance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_corner2"
+        android:padding="10dp">
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/view_thumbnail"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/profile"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/light_gray"/>
+
+
+        <RelativeLayout
+
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignTop="@+id/view_thumbnail"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/view_thumbnail">
+
+
+            <TextView
+                android:id="@+id/questionid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="by"
+
+                android:textColor="@color/black"
+                android:textSize="@dimen/assignmet_text_size" />
+
+
+            <TextView
+                android:id="@+id/view_firstname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_toRightOf="@+id/questionid"
+                android:paddingLeft="5dp"
+                android:text="@string/first_name"
+                android:textColor="@color/green"
+                android:textSize="@dimen/assignmet_text_size" />
+
+            <TextView
+                android:id="@+id/view_manager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/view_firstname"
+                android:text="@string/profilename"
+                android:textColor="@color/green"
+                android:textSize="@dimen/assignmet_text_size"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/view_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/questionid"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:text="@string/subjects_caps"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/assignmet_text_size" />
+
+
+
+
+            <TextView
+                android:id="@+id/view_solutions_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_toRightOf="@+id/view_firstname"
+                android:gravity="right"
+                android:paddingLeft="10dp"
+                android:textColor="@color/slpdarkgreen"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:textSize="@dimen/assignmet_text_size" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sol_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv1"
+            android:background="@color/white">
+
+
+            <TextView
+                android:id="@+id/view_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/date"
+                android:textColor="@color/slpgreen"
+                android:textSize="@dimen/assignmet_text_size"
+                />
+
+            <TextView
+                android:id="@+id/view_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/type_caps"
+                android:textColor="@color/slpgreen"
+                android:layout_alignParentEnd="true"
+                android:padding="5dp"
+                android:gravity="right"
+                android:textSize="@dimen/assignmet_text_size" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/framlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/content_student_performance"
+        android:layout_marginBottom="50dp"
+        android:layout_alignStart="@+id/view_answer">
+
+    </FrameLayout>
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/info_floating_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_above="@+id/view_answer"
+        android:src="@android:drawable/ic_dialog_info"
+        android:visibility="gone"
+        app:backgroundTint="#ff0000" />
+
+
+    <LinearLayout
+        android:id="@+id/view_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            android:padding="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey" />
+
+            <LinearLayout
+                android:id="@+id/upVOteLayout"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="50"
+                android:background="@drawable/rounded_corner2"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/upVote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/youranswer"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/assignmet_text_size" />
+
+
+                <TextView
+                    android:id="@+id/view_uranswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/assignmet_text_size" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+
+            <LinearLayout
+                android:id="@+id/commentsLayout"
+                android:layout_width="0dp"
+                android:background="@drawable/rounded_corner2"
+                android:layout_height="50dp"
+                android:layout_weight="50"
+                android:gravity="center"
+                 >
+
+                <TextView
+                    android:id="@+id/comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/correctanswer"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/assignmet_text_size" />
+
+
+                <TextView
+                    android:id="@+id/view_crtanser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="0"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/assignmet_text_size" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/dividerView4"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+
+                android:background="@color/grey" />
+
+
+        </LinearLayout>
+
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            android:padding="5dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/submit_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/view_cancel"
+            style="@style/take_assignment_bottom_buttons"
+            android:background="@color/green"
+            android:text="CANCEL"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/view_submit"
+            style="@style/take_assignment_bottom_buttons"
+            android:background="@color/blue"
+            android:text="SUBMIT"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

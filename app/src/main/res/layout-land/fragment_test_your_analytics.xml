@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/test_analytics_container_height"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/test_analytics_weight_left"
+                android:background="@color/darkestgrey"
+                android:paddingBottom="@dimen/test_analytics_score_padding_bottom"
+                android:paddingLeft="@dimen/test_analytics_score_padding_left"
+                android:paddingRight="@dimen/test_analytics_score_padding_right"
+                android:paddingTop="@dimen/test_analytics_score_padding_top" >
+
+                <TextView
+                    android:id="@+id/test_score_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/test_analytics_common_margin"
+                    android:text="@string/score"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="@dimen/test_analytics_common_text_size" />
+
+                <TextView
+                    android:id="@+id/test_marks_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/test_score_text"
+                    android:layout_marginTop="@dimen/test_analytics_common_margin"
+                    android:lineSpacingExtra="1dp"
+                    android:lineSpacingMultiplier=".85"
+                    android:text="@string/dummy_number"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/test_analytics_marks_score_text_size" />
+
+                <TextView
+                    android:id="@+id/test_marks_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/test_marks_score"
+                    android:layout_marginLeft="@dimen/test_analytics_common_margin"
+                    android:layout_toRightOf="@+id/test_marks_score"
+                    android:lineSpacingExtra="2dp"
+                    android:lineSpacingMultiplier=".85"
+                    android:text="@string/dummy_number"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="@dimen/test_analytics_marks_total_text_size" />
+
+                <TextView
+                    android:id="@+id/test_time_taken_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/test_marks_score"
+                    android:layout_marginTop="@dimen/test_analytics_time_taken_margin_top"
+                    android:text="@string/time_taken"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="@dimen/test_analytics_common_text_size" />
+
+                <TextView
+                    android:id="@+id/test_time_taken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/test_marks_score"
+                    android:layout_below="@id/test_time_taken_text"
+                    android:layout_marginTop="@dimen/test_analytics_common_margin"
+                    android:text="@string/dummy_duration"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/test_analytics_time_taken_text_size" />
+
+                <TextView
+                    android:id="@+id/test_time_taken_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/test_time_taken"
+                    android:layout_marginLeft="@dimen/test_analytics_common_margin"
+                    android:layout_toRightOf="@id/test_time_taken"
+                    android:text="@string/hrs"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="@dimen/test_analytics_time_taken_unnit_text_size" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" >
+
+                    <com.nhance.android.customviews.PieChartView
+                        android:id="@+id/test_course_score_chart_view"
+                        android:layout_width="@dimen/test_analytics_score_chart_radious"
+                        android:layout_height="@dimen/test_analytics_score_chart_radious"
+                        custom:chartType="pie"
+                        custom:fillColor="@color/darkergrey"
+                        custom:innerShift="@dimen/test_analytics_score_chart_radious_inner_shift" />
+
+                    <TextView
+                        android:id="@+id/test_score_percentage_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/dummy_percentage"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/test_analytics_score_percentage_text_size"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/test_swot_analytics_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/test_analytics_weight_right"
+                android:background="@color/darkergrey"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".75"
+                    android:background="@color/darkergrey"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/test_analytics_question_info_padding_right"
+                    android:paddingTop="@dimen/test_analytics_question_info_padding_top" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/test_analytics_question_info_padding_right"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/test_analytics_question_info_margin_left"
+                            android:paddingBottom="@dimen/test_analytics_question_info_padding_top"
+                            android:text="@string/questions_caps"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/test_analytics_common_text_size" />
+
+                        <LinearLayout
+                            android:id="@+id/test_correct_qus_count_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/test_analytics_question_status_bar_width"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <View
+                                android:layout_width="@dimen/test_analytics_question_status_bar_width"
+                                android:layout_height="@dimen/test_analytics_question_status_bar_height"
+                                android:layout_marginRight="@dimen/test_analytics_common_margin"
+                                android:background="@color/green" />
+
+                            <TextView
+                                android:id="@+id/test_status_qus_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/dummy_number"
+                                android:textColor="@color/lightgrey"
+                                android:textSize="@dimen/test_analytics_common_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/test_analytics_common_margin"
+                                android:text="@string/correct"
+                                android:textColor="@color/lightgrey"
+                                android:textSize="@dimen/test_analytics_common_text_size" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/test_incorrect_qus_count_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/test_analytics_question_status_bar_width"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <View
+                                android:layout_width="@dimen/test_analytics_question_status_bar_width"
+                                android:layout_height="@dimen/test_analytics_question_status_bar_height"
+                                android:layout_marginRight="@dimen/test_analytics_common_margin"
+                                android:background="@color/red" />
+
+                            <TextView
+                                android:id="@id/test_status_qus_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/dummy_number"
+                                android:textColor="@color/lightgrey"
+                                android:textSize="@dimen/test_analytics_common_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/test_analytics_common_margin"
+                                android:text="@string/incorrect"
+                                android:textColor="@color/lightgrey"
+                                android:textSize="@dimen/test_analytics_common_text_size" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/test_left_qus_count_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/test_analytics_question_status_bar_width"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <View
+                                android:layout_width="@dimen/test_analytics_question_status_bar_width"
+                                android:layout_height="@dimen/test_analytics_question_status_bar_height"
+                                android:layout_marginRight="@dimen/test_analytics_common_margin"
+                                android:background="@color/lightgrey" />
+
+                            <TextView
+                                android:id="@id/test_status_qus_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/dummy_number"
+                                android:textColor="@color/lightgrey"
+                                android:textSize="@dimen/test_analytics_common_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/test_analytics_common_margin"
+                                android:text="@string/left"
+                                android:textColor="@color/lightgrey"
+                                android:textSize="@dimen/test_analytics_common_text_size" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <com.nhance.android.customviews.PieChartView
+                            android:id="@+id/test_question_donut_view"
+                            android:layout_width="@dimen/test_analytics_score_chart_radious"
+                            android:layout_height="@dimen/test_analytics_score_chart_radious"
+                            android:layout_centerInParent="true"
+                            custom:chartType="donut"
+                            custom:fillColor="@color/darkergrey"
+                            custom:innerShift="@dimen/test_analytics_score_chart_radious_inner_shift" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/test_analytics_qus_attempt_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/dummy_number"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/test_analytics_question_attempt_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/questions_caps"
+                                android:textColor="@color/lightgrey"
+                                android:textSize="@dimen/test_analytics_common_text_size" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/test_accuracy_container"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".25"
+                    android:background="@color/darkgrey" >
+
+                    <View
+                        android:id="@+id/accuracy_bar_indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/yellow" />
+
+                    <TextView
+                        android:id="@+id/accuracy_container_accuracy_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:paddingTop="@dimen/test_analytics_question_info_padding_top"
+                        android:text="@string/accuracy"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/test_analytics_common_text_size" />
+
+                    <TextView
+                        android:id="@+id/accuracy_container_accuracy_value_as_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/accuracy_container_accuracy_text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/test_analytics_common_margin"
+                        android:text="@string/dummy_percentage"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/test_analytics_accuracy_text_size" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/test_course_analytics_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/test_analytics_course_margin_horizontal"
+            android:layout_marginRight="@dimen/test_analytics_course_margin_horizontal"
+            android:layout_marginTop="@dimen/test_analytics_course_margin_top"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

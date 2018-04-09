@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:id="@+id/lin_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/black"
+    android:layout_gravity="center_horizontal"
+    android:text="All Subjects"/>
+        <Spinner
+            android:id="@+id/subject_spiner"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+
+
+    </LinearLayout>
+
+
+
+<android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/swipelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ListView
+    android:id="@+id/ass_listview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+</ListView>
+</android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

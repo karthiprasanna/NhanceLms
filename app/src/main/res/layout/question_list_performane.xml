@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/test_student_answers_each_question_height"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="@dimen/test_student_answers_each_question_pad_marg"
+    android:layout_marginLeft="@dimen/test_student_answers_each_question_pad_marg"
+    android:layout_marginRight="@dimen/test_student_answers_each_question_pad_marg"
+    android:layout_marginBottom="@dimen/test_student_answers_each_question_divider_height">
+
+    <TextView
+        android:id="@+id/ques_no"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="0.3"
+        android:minWidth="@dimen/test_student_answers_each_question_no_width"
+        android:gravity="center"
+        android:text="@string/dummy_ques_number"
+        android:textColor="@color/darkblue"
+        android:ellipsize="end"
+        android:textSize="@dimen/test_student_answers_each_question_no_font_size"/>
+
+       <com.nhance.android.assignment.TeacherModule.AssignmentThreeHorizontalBarGraph
+           android:layout_width="0dp"
+           android:layout_weight="0.6"
+           android:layout_height="match_parent"
+           android:id="@+id/user_graph"
+           android:layout_marginRight="@dimen/test_student_answers_each_question_icon_width">
+       </com.nhance.android.assignment.TeacherModule.AssignmentThreeHorizontalBarGraph>
+
+
+
+    <ImageView
+
+        android:layout_width="0dp"
+        android:layout_weight="0.1"
+        android:layout_height="match_parent"
+        android:src="@drawable/icon_navigation_next_item"
+        android:contentDescription="@string/click_to_open"/>
+</LinearLayout>

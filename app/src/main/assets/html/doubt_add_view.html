@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript"
+	src="file:///android_asset/js/jquery-1.8.1.min.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="file:///android_asset/css/doubts.css">
+
+<script type="text/javascript">
+   const filePath = "file:///android_asset/css/";
+   function loadCssFile(filename){
+	var fileref=document.createElement("link")
+	fileref.setAttribute("rel", "stylesheet")
+	fileref.setAttribute("type", "text/css")
+	fileref.setAttribute("href", filename)
+	document.getElementsByTagName("head")[0].appendChild(fileref)
+   }
+   function loadDimensionFile(dimens){
+	const filename = filePath+"doubts_"+dimens+".css";
+	loadCssFile(filename);	
+   }
+</script>
+<script type="text/javascript" src="file:///android_asset/js/askDoubt.js"></script>
+</head>
+<body ontouchstart="">
+	<div id="doubtAskPage">
+		<div class="addDoubtAnsHead">Ask a Doubt</div>
+		<div class="askDoubtTitle">Title</div>
+		<div>
+			<input type="text" class="askDoubtTitleInput" placeholder="What's your doubt about? Be precise"/>
+		</div>
+		<div class="askDoubtTitle">Doubt</div>
+		<div class="RTEHolder">
+		   <div class="RTEToolBar">
+			<button class='RTEAddDiagram'> 
+				<span class='addDiagramImg'></span>
+				<span>Add Image</span>
+			</button>
+			<div class="cleaner_with_divider">&nbsp;</div>
+		   </div>
+		   <div class="RTEArea" contenteditable="true"></div>
+		</div>
+		<div class="doubtSelectTags">
+			<div class="askDoubtTitle">Tags</div>
+			<div class="tagsSelectHolder">
+				<select class="selectTag selectSubject" disabled>
+					<option selected value=''>Fetching subject / course</option>
+				</select>
+				<select class="selectTag selectTopic" disabled>
+					<option selected value=''>Topics</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="file:///android_asset/js/rte.js"></script>
+	<script type="text/javascript">
+		vRTE.init($(".RTEHolder"));
+	</script>
+
+
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			extensions : [ "tex2jax.js" ],
+			jax : [ "input/TeX", "output/HTML-CSS" ],
+			tex2jax : {
+				displayMath : [],
+				inlineMath : [ [ '$$', '$$' ], [ "\\[", "\\]" ], [ '$', '$' ],
+						[ "\\(", "\\)" ] ],
+				processEscapes : true
+			},
+			TeX : {
+				extensions : [ "AMSmath.js", "AMSsymbols.js", "noErrors.js",
+						"noUndefined.js" ]
+			},
+			"HTML-CSS" : {
+				linebreaks : {
+					automatic : true
+				},
+				scale : 100
+			},
+			messageStyle: "none",
+			showMathMenu: false
+		});
+	</script>
+	<script type="text/javascript"
+		src="file:///android_asset/js/MathJax/MathJax.js">
+	</script>
+</body>
+</html>

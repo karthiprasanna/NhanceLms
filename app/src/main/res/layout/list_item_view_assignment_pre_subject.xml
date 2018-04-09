@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/test_pre_list_item_vertical_padding"
+    android:paddingLeft="@dimen/test_pre_list_item_side_padding"
+    android:paddingRight="@dimen/test_pre_list_item_side_padding"
+    android:paddingTop="@dimen/test_pre_list_item_vertical_padding" >
+
+    <ImageView
+        android:id="@+id/assignment_pre_subject_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/open"
+        android:src="@drawable/icon_navigation_next_item" />
+    <TextView
+        android:id="@+id/assignment_pre_subject_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/dummy_big_string"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/test_pre_subject_font_size"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/assignment_pre_subject_name"
+        android:layout_marginTop="@dimen/test_pre_list_item_stats_margin_top"
+        android:layout_toLeftOf="@id/assignment_pre_subject_arrow"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:visibility="gone"
+            style="@style/test_pre_list_item_stats_head"
+            android:text="@string/attempts_colon_caps" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/assignment_pre_list_item_marks"
+            style="@style/test_pre_list_item_stats_value"
+            android:text="@string/dummy_number" />
+
+        <TextView
+            style="@style/test_pre_list_item_stats_head"
+            android:text="@string/questions_colon_caps" />
+
+        <TextView
+            android:id="@+id/assignment_pre_list_item_questions"
+            style="@style/test_pre_list_item_stats_value"
+            android:text="@string/dummy_number" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

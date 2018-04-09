@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:paddingTop="10dp"
+
+    android:orientation="horizontal"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/re1">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:id="@+id/re3"
+            android:layout_below="@+id/content"
+            android:background="@drawable/rounded_corner1"
+
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/thumbnail"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/profile"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/light_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Dinesh"
+                android:textColor="#000"
+                android:id="@+id/username"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/thumbnail"
+                android:layout_toLeftOf="@+id/date"/>
+
+
+
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:id="@+id/lmsg"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/username"
+                android:layout_toRightOf="@id/thumbnail"
+                android:layout_toEndOf="@id/thumbnail"
+                android:textColor="#000"
+                android:layout_margin="5dp">
+            </WebView>
+
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_below="@+id/lmsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="dd/mm/yyyy/10:30 AM"
+                    android:textSize="12sp"
+                    android:textColor="#000" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/re1"
+        android:id="@+id/re2">
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_below="@+id/contentl"
+            android:background="@drawable/rounded_corner2_chatview"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/thumbnailleft"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/profile"
+                android:layout_alignParentRight="true"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/light_gray"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Dinesh"
+                android:textColor="#000"
+                android:id="@+id/usernameleft"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/thumbnailleft"
+                />
+
+
+
+
+            <WebView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+
+                android:text="Message"
+
+                android:textStyle="bold"
+                android:id="@+id/msgleft"
+                android:layout_marginRight="5dp"
+                android:layout_below="@id/usernameleft"
+                android:layout_toLeftOf="@id/thumbnailleft"
+                android:layout_toStartOf="@id/thumbnailleft"
+                android:textColor="#000"
+
+                >
+            </WebView>
+            <LinearLayout
+                android:id="@+id/contentl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/msgleft"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/timeleft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="dd/mm/yyyy/10:30 AM"
+                    android:textSize="12sp"
+                    android:layout_toLeftOf="@id/contentl"
+                    android:textColor="#000" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

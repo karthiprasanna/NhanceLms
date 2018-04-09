@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@drawable/rounded_corner2" >
+
+    <View
+        android:id="@+id/course_percentage_marks_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/avg_percentage_container"
+        android:layout_alignTop="@+id/avg_percentage_container"
+        android:background="@color/green" />
+
+    <TextView
+        android:id="@+id/course_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/overall_analytics_course_list_item_padding_left"
+        android:layout_toLeftOf="@+id/avg_percentage_container"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="@string/dummy_sub"
+        android:textColor="@color/darkergrey"
+        android:textSize="@dimen/overall_analytics_course_list_item_name_text_size" />
+
+    <ImageView
+        android:id="@+id/navigation_icon_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/overall_analytics_course_list_item_padding_right"
+        android:contentDescription="@string/img"
+        android:src="@drawable/icon_navigation_next_item" />
+
+    <LinearLayout
+        android:id="@+id/avg_percentage_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/navigation_icon_next"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/overall_analytics_course_list_item_padding_top"
+        android:paddingLeft="@dimen/overall_analytics_course_list_item_course_name_margin_right"
+        android:paddingTop="@dimen/overall_analytics_course_list_item_padding_top"
+        android:visibility="visible" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/avg_marks"
+            android:textColor="@color/darkergrey"
+            android:textSize="@dimen/overall_analytics_course_list_item_avg_marks_text_size" />
+
+        <TextView
+            android:id="@+id/agv_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_percentage"
+            android:textColor="@color/darkestgrey"
+            android:textSize="@dimen/overall_analytics_course_list_item_avg_percentage_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/course_list_last_item_margin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_10"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="2dp"
+        android:layout_below="@id/avg_percentage_container"
+        android:background="@color/red" />
+
+</RelativeLayout>

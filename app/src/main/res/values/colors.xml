@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red">#f9632f</color>
+
+
+    <color name="blue1">#33B5E5</color>
+    <color name="light_yellow">#FFFF99</color>
+
+    <color name="grey">#4b4b4d</color>
+
+    <color name="orange">#FFA544</color>
+    <color name="light_gray">#E8E8E8</color>
+    <color name="transparent">#000000</color>
+    <color name="black">#000000</color>
+    <color name="black1">#9b9797</color>
+    <color name="lightgreen">#C4E399</color>
+    <color name="green">#99CC00</color>
+    <color name="green_90">#9099CC00</color>
+    <color name="darkgreen">#669900</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_trans_10">#10FFFFFF</color>
+    <color name="white_trans_20">#20FFFFFF</color>
+    <color name="white_trans_30">#30FFFFFF</color>
+    <color name="white_trans_50">#50FFFFFF</color>
+    <color name="white_trans_70">#70FFFFFF</color>
+    <color name="white_trans_80">#80FFFFFF</color>
+    <color name="white_trans_90">#90FFFFFF</color>
+    <color name="lightblue">#BCE8F0</color>
+    <color name="blue">#33B5E5</color>
+    <color name="blue_90">#9033B5E5</color>
+    <color name="blue_60">#6033B5E5</color>
+    <color name="blue_30">#3033B5E5</color>
+    <color name="blue_20">#2033B5E5</color>
+    <color name="blue_10">#1033B5E5</color>
+    <color name="blue_selector">#B8DFEC</color>
+    <color name="darkblue">#0099CC</color>
+    <color name="darkblue_20">#200099CC</color>
+    <color name="darkblue_60">#600099CC</color>
+    <color name="darkerblue">#116699</color>
+    <color name="darkerblue_80">#80116699</color>
+    <color name="lightred">#FF6666</color>
+
+    <color name="red_90">#90FF4444</color>
+    <color name="darkred">#CC0000</color>
+    <color name="yellow">#FFBB33</color>
+    <color name="yellow_90">#90FFBB33</color>
+    <color name="darkyellow">#FF8800</color>
+    <color name="darkyellow_70">#70FF8800</color>
+    <color name="lightgrey">#999999</color>
+    <color name="allbs">#BBBBBB</color>
+    <color name="lightergrey">#CCCCCC</color>
+    <color name="morelightergrey">#DDDDDD</color>
+    <color name="lightestgrey">#EEEEEE</color>
+    <color name="darkgrey">#666666</color>
+    <color name="darkergrey">#333333</color>
+    <color name="darkergrey_30">#30333333</color>
+    <color name="darkgrey_15">#85666666</color>
+    <color name="darkestgrey">#222222</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="black_10">#10000000</color>
+    <color name="black_20">#20000000</color>
+    <color name="black_30">#30000000</color>
+    <color name="black_40">#40000000</color>
+    <color name="black_50">#50000000</color>
+    <color name="black_60">#60000000</color>
+    <color name="black_70">#70000000</color>
+    <color name="black_80">#80000000</color>
+    <color name="purple">#AA66CC</color>
+    <color name="purple_90">#90AA66CC</color>
+    <color name="translucent_black">#80000000</color>
+    <color name="popup_back_transparency">#05EEEEEE</color>
+    <color name="slpgreen">#33aa55</color>
+    <color name="slpdarkgreen">#227744</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorblue">#8ae8ff</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorgreen">#70a165</color>
+    <color name="colorred">#fd232b</color>
+    <color name="colorwhite">#d2cfd0</color>
+
+
+    <color name="white_trans">#77FFFFFF</color>
+    <color name="list_item_selected_state">#009E9F</color>
+
+    <color name="tab_background_selected">#009E9F</color>
+    <color name="tab_background_unselected">#60000000</color>
+
+
+    <color name="circleProgressCompleteStartGradient">@color/dark_blue</color>
+    <color name="circleProgressCompleteEndGradient">@color/coral_blue</color>
+    <color name="circleProgressIncompleteStartGradient">@color/light_gray</color>
+    <color name="circleProgressIncompleteEndGradient">@color/light_gray</color>
+    <color name="coral_blue">#1DAEFA</color>
+    <color name="dark_blue">#125D9D</color>
+
+</resources>

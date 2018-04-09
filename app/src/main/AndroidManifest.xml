@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nhance.android"
+    android:installLocation="auto"
+    android:versionCode="13"
+    android:versionName="3.0">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+
+        <!--
+        <group android:gid="sdcard_rw" />
+        <group android:gid="media_rw" />
+        -->
+    </uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".managers.VApp"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+
+        <!--
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimaryDark" />
+
+        <service
+            android:name=".services.VServerService"
+            android:label="@string/nhance_server" />
+        <service
+            android:name=".services.FileDownloaderService"
+            android:label="@string/download_to_device" />
+        <service
+            android:name=".services.PackageImportService"
+            android:label="@string/import_package" />
+        <service
+            android:name=".receivers.CustomFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".receivers.CustomFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".receivers.SDMountReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                <action android:name="android.intent.action.MEDIA_REMOVED" />
+                <action android:name="android.intent.action.MEDIA_BAD_REMOVAL" />
+                <action android:name="android.intent.action.MEDIA_EJECT" />
+
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receivers.NetworkMonitor">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activities.AppLandingPageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <!-- start content player activities -->
+        <activity
+            android:name=".activities.content.players.DocumentPlayerActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.content.players.VideoPlayerActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".activities.content.players.VideoPlayerFullScreenActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:screenOrientation="sensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.content.players.SWFPlayerActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" />
+
+        <!-- end content player activities -->
+
+        <activity
+            android:name=".activities.tests.TestPreAttemptPageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.tests.TakeTestActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.doubts.SingleDoubtActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/action_doubts"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.doubts.AskDoubtActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/action_doubts"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWithDefaultSpinners" />
+        <activity
+            android:name=".activities.imageviewer.ImageViewActivity"
+            android:label="@string/title_activity_image_view"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.tests.TestPostAttemptPageActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!--
+        <activity
+            android:name="com.nhance.android.TestActivity"
+            android:label="@string/title_activity_test" >
+        </activity>
+        -->
+        <activity
+            android:name=".activities.tests.SingleQuestionActivity"
+            android:label="@string/title_activity_single_question"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SignupAndLoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_signup_and_login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.OrgCategoriesActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MyProgramsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.tests.TestTeacherPageActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ModuleActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.CompoundMediaPlayerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PaymentFragmentActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWithDefaultSpinners" />
+        <activity
+            android:name=".activities.MyOrdersActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ActivateSDCardActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <!-- about pages -->
+        <activity
+            android:name=".activities.about.AboutActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Message pages -->
+        <activity
+            android:name=".message.ChatActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Message"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".message.SendNewMessage"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Message"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.content.players.HTMLContentDisplayActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_htmlcontent_display"
+            android:screenOrientation="sensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".recentActivities.WebActivity" />
+        <activity
+            android:name=".recentActivities.CommentsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_comments"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".recentActivities.AddFeedActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- Himank shah -->
+        <activity
+            android:name=".assignment.activity.AssignmentPreAttemptPageActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+
+
+        <!-- <activity android:name=".assignment.activity.TakeAssignmentActivity" /> -->
+        <activity
+            android:name=".assignment.activity.AssignmentPostAttemptPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".assignment.activity.AssignmentSingleQuestionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".assignment.StudentPerformance.ShowCommentActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- karthi -->
+
+
+        <activity android:name=".QuestionCount.QuestionSolutionActivity" />
+        <activity android:name=".QuestionCount.QuestionCommentsActivity" />
+        <activity android:name=".QuestionCount.QuestionCountActivity" />
+        <activity android:name=".QuestionCount.UserExamActivity"></activity>
+
+        <activity
+            android:name=".assignment.activity.AssigmentTeacherPageActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ChallengeArena.ChallengeExamActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.content.players.AddVideoCommentActivity" />
+        <activity
+            android:name=".ChallengeArena.ClosedChallengeSolutionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChallengeArena.ClosedChallengeCommentsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChallengeArena.YourChallengeCommentsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChallengeArena.ClosedLeaderBoardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChallengeArena.YourLeaderBoardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChallengeArena.ClosedChallengesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChallengeArena.ActivieChallengesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChallengeArena.YoursChallengesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChallengeArena.YoursChallengesCountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChallengeArena.ResultAwaitedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChallengeArena.ClosedViewChallengeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChallengeArena.YourChallengesViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChallengeArena.YourChallengeSolutionActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.QrCodeScannerActivity" />
+
+        <activity android:name=".activities.content.players.PdfActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".assignment.UserPerformance.StudentExamGridActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".assignment.UserPerformance.StudentAssignmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".assignment.UserPerformance.UserPurposeAssignmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".assignment.UserPerformance.AssignmentViewAnalyticsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".assignment.UserPerformance.AssignmentSolutionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".assignment.UserPerformance.AssignmentCommentActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".assignment.TeacherPerformance.TeacherExamViewActivity"
+            android:screenOrientation="portrait" />
+
+      <activity android:name=".assignment.TeacherPerformance.TeacherPerformanceActivity"
+          android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".assignment.TeacherModule.StudentQuestionStatusActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".assignment.TeacherPerformance.TeacherPurposeExamActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

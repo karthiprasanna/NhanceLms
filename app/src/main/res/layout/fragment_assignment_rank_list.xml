@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/assignment_analytics_user_rank_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/test_rank_icon_margin"
+            android:drawableLeft="@drawable/icon_rank"
+            android:drawablePadding="@dimen/test_rank_text_drawable_padding"
+            android:gravity="center"
+            android:paddingBottom="@dimen/test_rank_margin"
+            android:paddingTop="@dimen/test_rank_margin"
+            android:text="@string/test_you_are"
+            android:textColor="@color/white"
+            android:textSize="@dimen/test_rank_text_size" />
+
+        <TextView
+            android:id="@+id/assignment_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/test_rank_margin"
+            android:gravity="center"
+            android:paddingBottom="@dimen/test_rank_margin"
+            android:paddingTop="@dimen/test_rank_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/test_rank_value_text_size" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/assignment_rank_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkestgrey"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkergrey"
+        android:orientation="vertical"
+        android:paddingLeft="15dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="25dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Ajith REddy gfyujsgh jshdgfjshdg hjfd"
+            android:textColor="@color/darkerblue"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Grade 12,Benasjhdfg sdhgjhsdgjfhsg jfhgdsj"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_book"
+        android:drawablePadding="10dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="14dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="14dp"
+        android:text="Analytics"
+        android:textColor="@color/lightgrey"
+        android:textSize="16sp" >
+    </TextView>
+
+</LinearLayout>

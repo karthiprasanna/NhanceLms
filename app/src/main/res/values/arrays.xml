@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="navigation_items">
+        <item>LIBRARY</item>
+        <item>ANALYTICS</item>
+        <item>DOUBTS</item>
+        <item>PROFILE</item>
+        <item>RECENTACTIVITY</item>
+        <item>MESSAGE</item>
+        <item>NOTIFICATIONS</item>
+        <item>CHALLENGEARENA</item>
+        <item>LEADERBOARD</item>
+
+    </string-array>
+    <string-array name="gender">
+        <item>MALE</item>
+        <item>FEMALE</item>
+    </string-array>
+    <string-array name="library_content_types">
+        <item>ALL</item>
+        <item>MODULE</item>
+        <item>DOCUMENT</item>
+        <item>HTMLCONTENT</item>
+        <item>VIDEO</item>
+        <item>FILE</item>
+        <item>TEST</item>
+        <item>ASSIGNMENT</item>
+        <item>QUESTION</item>
+         <!--<item>COMPOUNDMEDIA</item>-->
+
+    </string-array>
+    <string-array name="test_instructions">
+        <item><![CDATA[ Do not press the <b>Power Key, Home</b> or <b>Back</b> Button while test is in progress]]></item>
+        <item><![CDATA[Do not <b>Exit</b> the application while the test is in progress]]></item>
+        <item><![CDATA[Any <b>\'Incoming Call\'</b> will end the test]]></item>
+        <item><![CDATA[Use <b>\'End Test\'</b> Button on top-left when done ]]></item>
+        <item><![CDATA[All the best for the test]]></item>
+    </string-array>
+    <string-array name="doubts_list_filter">
+        <item>Recently Added</item>
+        <item>Most Popular</item>
+        <item>Following</item>
+        <item>Asked by me</item>
+    </string-array>
+    <string-array name="questions_list_filter">
+        <item>No Sorting</item>
+        <item>Most Attempted</item>
+        <item>Least Attempted</item>
+        <item>Most Correct</item>
+        <item>Least Correct</item>
+    </string-array>
+    <string-array name="test_post_page_tabs">
+        <item>ANALYTICS</item>
+        <item>RANKLIST</item>
+        <item>ANSWERS</item>
+    </string-array>
+    <string-array name="assignment_post_page_tabs">
+        <item>ANALYTICS</item>
+        <!--<item>QUESTIONlIST</item>-->
+        <item>ANSWERS</item>
+    </string-array>
+    <string-array name="error_web_chrome_client_messages">
+        <item>-1:Generic error</item>
+        <item>-2:Server or proxy hostname lookup failed</item>
+        <item>-3:Unsupported authentication scheme (not basic or digest)</item>
+        <item>-4:User authentication failed on server</item>
+        <item>-5:User authentication failed on proxy</item>
+        <item>-6:Failed to connect to the server</item>
+        <item>-7:Failed to read or write to the server</item>
+        <item>-8:Connection timed out</item>
+        <item>-9:Too many redirects</item>
+        <item>-10:Unsupported URI scheme</item>
+        <item>-11:Failed to perform SSL handshake</item>
+        <item>-12:Malformed URL</item>
+        <item>-13:Generic file error</item>
+        <item>-14:File not found</item>
+        <item>-15:Too many requests during this load</item>
+    </string-array>
+    <string-array name="third_party_library_credits">  
+        <item>&#8226; ActionBarSherlock under  <![CDATA[<a href=http://www.apache.org/licenses/LICENSE-2.0 target=_blank>Apache License, Version 2.0</a>]]></item>
+        <item>&#8226; Apache Commons Lang under  <![CDATA[<a href=http://www.apache.org/licenses/LICENSE-2.0 target=_blank>Apache License, Version 2.0</a>]]></item>
+        <item>&#8226; Apache HttpCore under  <![CDATA[<a href=http://www.apache.org/licenses/LICENSE-2.0 target=_blank>Apache License, Version 2.0</a>]]></item>
+        <item>&#8226; Apache HttpMIME under  <![CDATA[<a href=http://www.apache.org/licenses/LICENSE-2.0 target=_blank>Apache License, Version 2.0</a>]]></item>
+        <item>&#8226; iTextG under  <![CDATA[<a href=https://www.gnu.org/licenses/gpl-3.0.txt target=_blank>GNU Public License</a>]]></item>
+        <item>&#8226; GoogleAnalyticsServices under  <![CDATA[<a href=http://www.apache.org/licenses/LICENSE-2.0 target=_blank>Apache License, Version 2.0</a>]]></item>
+        <item>&#8226; Jsoup HTML parser under  <![CDATA[<a href=http://opensource.org/licenses/MIT target=_blank>MIT License</a>]]></item>
+        <item>&#8226; Spongy Castle under   <![CDATA[<a href=http://www.bouncycastle.org/licence.html target=_blank>Bouncy Castle Licence</a>]]></item>        
+    </string-array>
+    <!--Himank Shah-->
+    <string-array name="assignment_instructions">
+        <item><![CDATA[ Do not press the <b>Power Key, Home</b> or <b>Back</b> Button while test is in progress]]></item>
+        <item><![CDATA[Do not <b>Exit</b> the application while the test is in progress]]></item>
+        <item><![CDATA[Any <b>\'Incoming Call\'</b> will end the test]]></item>
+        <item><![CDATA[Use <b>\'End Test\'</b> Button on top-left when done ]]></item>
+        <item><![CDATA[All the best for the test]]></item>
+    </string-array>
+</resources>

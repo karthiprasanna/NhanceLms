@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/light_gray"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   android:padding="10dp"
+    tools:context=".activities.AnalyticsOverallActivity" >
+
+    <ListView
+        android:id="@+id/overall_analytics_course_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="10.0sp"
+        android:divider="@color/light_gray"
+        android:visibility="visible" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/no_analytics"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            style="@style/sad_smiley_img"
+            android:contentDescription="@string/img" />
+
+        <TextView
+            style="@style/sad_smiley_text"
+            android:text="@string/no_analytics_msg" />
+
+        <TextView
+            style="@style/sad_smiley_text_small"
+            android:text="@string/no_analytics_attempt_test_msg" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical" >
+
+    <com.nhance.android.activities.imageviewer.TouchImageView
+        android:id="@+id/image_viewer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/black"
+        android:clickable="false"
+        android:contentDescription="@string/desc_image_view"
+        android:src="@drawable/black" />
+
+    <TextView
+        android:id="@+id/image_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white_trans_20"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxHeight="@dimen/image_viewer_title_max_height"
+        android:padding="@dimen/image_viewer_title_padding"
+        android:shadowColor="@color/black_50"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/image_viewer_title_text_size" />
+
+</RelativeLayout>

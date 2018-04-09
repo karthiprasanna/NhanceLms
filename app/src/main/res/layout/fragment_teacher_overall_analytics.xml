@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/teacher_analytics_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/teacher_analytics_top_bar_height"
+        android:background="@color/darkestgrey"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/teacher_analytics_top_bar_pad_left"
+        android:paddingRight="@dimen/teacher_analytics_top_bar_pad_left" >
+
+        <TextView
+            android:id="@+id/teacher_analytics_average_test_score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:paddingRight="@dimen/teacher_analytics_top_bar_pad_left"
+            android:text="@string/test_score_caps"
+            android:textColor="@color/darkyellow"
+            android:textSize="@dimen/teacher_analytics_test_score_font_size" />
+
+        <CheckBox
+            android:id="@+id/teacher_analytics_show_highest"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/teacher_analytics_average_test_score_text"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:text="@string/show_highest"
+            android:textColor="@color/green"
+            android:textSize="@dimen/teacher_analytics_test_score_font_size" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/teacher_analytics_test_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@drawable/blackColor"
+        android:dividerHeight="@dimen/teacher_analytics_divider_height" >
+    </ListView>
+    
+    <LinearLayout
+        android:id="@+id/no_analytics"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            style="@style/sad_smiley_img"
+            android:contentDescription="@string/img" />
+
+        <TextView
+            style="@style/sad_smiley_text"
+            android:text="@string/no_analytics_msg" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navigation_drawer_menu_head"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black_20"
+    android:paddingBottom="@dimen/navigation_item_vertical_padding"
+    android:paddingRight="@dimen/navigation_common_side_padding"
+    android:paddingTop="@dimen/navigation_item_vertical_padding" >
+
+    <ImageView
+        android:id="@+id/navigation_drawer_menu_head_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/navigation_drawer_menu_head_arrow_margin_left"
+        android:layout_marginRight="@dimen/navigation_drawer_menu_head_arrow_margin_right"
+        android:contentDescription="@string/img"
+        android:src="@drawable/navigation_previous_item_white" />
+
+    <ImageView
+        android:id="@+id/navigation_drawer_menu_head_img"
+        android:layout_width="@dimen/navigation_item_image_dimen"
+        android:layout_height="@dimen/navigation_item_image_dimen"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/navigation_item_drawable_padding"
+        android:layout_toRightOf="@id/navigation_drawer_menu_head_arrow"
+        android:contentDescription="@string/img" />
+
+    <TextView
+        android:id="@+id/navigation_drawer_menu_head_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/navigation_drawer_menu_head_img"
+        android:text="@string/library"
+        android:textColor="@color/white"
+        android:textSize="@dimen/navigation_item_font_size" >
+    </TextView>
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/org_categories_category_height"
+    android:background="@drawable/rounded_corner2"
+    android:drawablePadding="@dimen/org_categories_category_drawable_padding"
+    android:drawableRight="@drawable/icon_navigation_next_item"
+    android:ellipsize="end"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/org_categories_category_padding_left"
+    android:paddingRight="@dimen/org_categories_category_padding_right"
+    android:singleLine="true"
+    android:textColor="@color/darkgrey"
+    android:layout_margin="10dp"
+    android:textSize="@dimen/org_categories_category_font_size" >
+
+</TextView>

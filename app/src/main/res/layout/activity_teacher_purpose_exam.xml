@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nhance.android.QuestionCount.SingleExamActivity">
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:id="@+id/content_student_performance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner2"
+        android:padding="10dp">
+
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/purpose_thumbnail"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/profile"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/light_gray"/>
+
+        <RelativeLayout
+
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/purpose_thumbnail"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/purpose_thumbnail">
+
+
+
+            <TextView
+                android:id="@+id/purpose_firstname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="@string/first_name"
+                android:textColor="@color/green"
+                android:textSize="@dimen/assignmet_text_size" />
+
+
+
+            <TextView
+                android:id="@+id/purpose_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/purpose_firstname"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:text="@string/subjects_caps"
+                android:textColor="@color/red"
+                android:textSize="@dimen/assignmet_text_size" />
+
+
+
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/purpose_solutions"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/purpose_firstname"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/purpose_name"
+                android:gravity="right"
+                android:text=""
+                android:paddingLeft="10dp"
+                android:textColor="@color/slpdarkgreen"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:textSize="@dimen/assignmet_text_size" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sol_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv1"
+            android:background="@color/white">
+
+
+            <TextView
+                android:id="@+id/purpose_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/date"
+                android:textColor="@color/slpgreen"
+                android:textSize="@dimen/assignmet_text_size"
+                />
+
+            <TextView
+                android:id="@+id/purpose_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/type_caps"
+                android:textColor="@color/slpgreen"
+                android:layout_alignParentEnd="true"
+                android:padding="5dp"
+                android:gravity="right"
+                android:textSize="@dimen/assignmet_text_size" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_below="@+id/content_student_performance"
+        android:layout_above="@+id/purpose_answer"
+        android:layout_margin="10dp"
+        android:id="@+id/framlayout"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+
+    <LinearLayout
+
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/purpose_submit_cancel"
+        android:visibility="gone"
+        android:id="@+id/purpose_answer"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            />
+
+        <LinearLayout
+            android:background="@color/white"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                />
+
+            <LinearLayout
+                android:id="@+id/upVOteLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:textSize="@dimen/assignmet_text_size"
+                    android:id="@+id/upVote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/youranswer"
+                    android:textColor="@color/blue"
+                    />
+
+
+
+                <TextView
+                    android:textSize="@dimen/assignmet_text_size"
+                    android:id="@+id/purpose_uranswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:textColor="@color/blue"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                />
+
+            <LinearLayout
+                android:id="@+id/commentsLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/correctanswer"
+                    android:textSize="@dimen/assignmet_text_size"
+                    android:textColor="@color/green"
+                    />
+
+
+
+                <TextView
+                    android:textSize="@dimen/assignmet_text_size"
+                    android:id="@+id/purpose_crtanser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:text="0"
+                    android:textColor="@color/green"
+                    />
+
+            </LinearLayout>
+            <View
+                android:id="@+id/dividerView4"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            />
+    </LinearLayout>
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:id="@+id/purpose_submit_cancel"
+        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:textColor="@color/white"
+                style="@style/take_assignment_bottom_buttons"
+                android:id="@+id/purpose_cancel"
+                android:text="CANCEL"
+                />
+            <TextView
+                android:background="@drawable/rounded_corner"
+                android:textColor="@color/white"
+                style="@style/take_assignment_bottom_buttons"
+                android:id="@+id/purpose_submit"
+                android:layout_marginLeft="4dp"
+                android:text="SUBMIT"
+                />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

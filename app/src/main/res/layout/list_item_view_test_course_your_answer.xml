@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/test_answer_course_list_item_padding" >
+
+    <TextView
+        android:id="@+id/test_course_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/test_answer_course_list_item_course_name_margin_bottom"
+        android:text="@string/dummy_sub"
+        android:textAllCaps="true"
+        android:textColor="@color/darkyellow"
+        android:textSize="@dimen/test_answer_course_list_item_course_name_size" />
+
+    <TextView
+        android:id="@+id/test_marks_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/test_course_name"
+        android:text="@string/test_marks"
+        android:textColor="@color/black"
+        android:textSize="@dimen/test_answer_course_list_item_marks_size" />
+
+    <TextView
+        android:id="@+id/test_course_marks_scored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/test_course_name"
+        android:layout_marginLeft="@dimen/test_answer_course_list_item_marks_margin"
+        android:layout_toRightOf="@id/test_marks_text"
+        android:text="@string/dummy_number"
+        android:textColor="@color/black"
+        android:textSize="@dimen/test_answer_course_list_item_marks_size"
+        android:textStyle="bold" />
+
+    <com.nhance.android.customviews.NonScrollableGridView
+        android:id="@+id/test_question_answers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/test_marks_text"
+        android:layout_marginTop="@dimen/test_answer_course_list_item_qus_ans_margin_top"
+        android:columnWidth="@dimen/test_answer_course_list_item_qus_ans_box_size"
+        android:horizontalSpacing="@dimen/test_answer_course_list_item_qus_ans_box_spacing_h"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/test_answer_course_list_item_qus_ans_box_spacing_v" >
+    </com.nhance.android.customviews.NonScrollableGridView>
+
+</RelativeLayout>

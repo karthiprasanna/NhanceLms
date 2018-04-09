@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefreshLayoutmsg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:id="@+id/spinner_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/attempt_color"
+            android:background="@color/lightergrey"
+            android:orientation="horizontal">
+            <Spinner
+                android:paddingLeft="15dp"
+
+                android:id="@+id/yc_recent_popular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/doubts_list_filter"
+                android:gravity="left"
+                android:textAlignment="gravity"
+                android:textDirection="ltr" />
+
+            <Spinner
+                android:id="@+id/ycspin_sublist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textAlignment="gravity"
+                android:textDirection="ltr" />
+        </LinearLayout>
+
+
+        <TextView
+            android:background="#FF6B00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Closed Challenges"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:scrollbars="vertical"
+                android:paddingTop="20dp"
+                android:id="@+id/ycrecyclerview"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+
+
+            <TextView
+
+                android:visibility="visible"
+                android:id="@+id/empty_yc_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="No Challenges."
+                android:layout_gravity="center"
+                android:textSize="@dimen/challenge_text_size"
+                android:gravity="center"></TextView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

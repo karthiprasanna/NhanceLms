@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5FA"
+    tools:context=".LibraryContentFragment">
+
+    <LinearLayout
+        android:id="@+id/library_no_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView style="@style/sad_smiley_img" />
+
+        <TextView
+            style="@style/sad_smiley_text"
+            android:text="@string/no_content_found"></TextView>
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/library_content_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="1dp" />
+
+
+</RelativeLayout>

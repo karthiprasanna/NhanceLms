@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/teacher_analytics_test_height"
+    android:background="@color/darkgrey"
+    android:clickable="true" >
+
+    <View
+        android:id="@+id/teacher_analytics_avg_score_bar"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/darkyellow_70" />
+	<View
+        android:id="@+id/teacher_analytics_highest_score_bar"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:background="@color/green" />
+	
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/teacher_analytics_test_item_pad_top_bottom"
+        android:paddingLeft="@dimen/teacher_analytics_test_item_pad_left"
+        android:paddingRight="@dimen/teacher_analytics_test_item_pad_right"
+        android:paddingTop="@dimen/teacher_analytics_test_item_pad_top_bottom" >
+
+        <TextView
+            android:id="@+id/teacher_analytics_test_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:maxWidth="200dp"
+            android:text="@string/dummy_big_string"
+            android:textSize="@dimen/teacher_analytics_test_name_font_size" />
+
+        <TextView
+            android:id="@+id/teacher_analytics_test_attempts_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/teacher_analytics_test_name"
+            android:text="@string/attempts_camel_case"
+            android:layout_marginRight="@dimen/teacher_analytics_test_attempts_pad_right"
+            android:textColor="@color/white"
+            android:textSize="@dimen/teacher_analytics_test_attempts_font_size" />
+        
+        <TextView
+            android:id="@+id/teacher_analytics_test_attempts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/teacher_analytics_test_name"
+           	android:layout_toRightOf="@id/teacher_analytics_test_attempts_text"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/teacher_analytics_test_attempts_font_size" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/teacher_analytics_test_highest_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:background="@drawable/green_circle"
+                android:layout_marginRight="@dimen/teacher_analytics_test_attempts_pad_right"
+                android:padding="@dimen/teacher_analytics_test_highest_score_padding"
+                android:textColor="@color/darkergrey"
+                android:textSize="@dimen/teacher_analytics_test_attempts_font_size" />
+
+            <TextView
+                android:id="@+id/teacher_analytics_test_avg_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/teacher_analytics_test_avg_score_font_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/click_to_open"
+                android:src="@drawable/icon_navigation_next_item" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

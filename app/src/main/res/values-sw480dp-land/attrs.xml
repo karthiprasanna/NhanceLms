@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="overall_analytics_level_name_weight" type="integer">60</item>
+    <item name="overall_analytics_level_accuracy_weight" type="integer">20</item>
+    <item name="overall_analytics_level_speed_weight" type="integer">20</item>
+    <item name="overall_analytics_level_sum_weight" type="integer">100</item>
+
+</resources>

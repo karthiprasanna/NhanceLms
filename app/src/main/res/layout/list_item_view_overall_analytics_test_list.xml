@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_corner2"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/overall_analytics_test_list_item_padding_v"
+
+    android:paddingRight="@dimen/overall_analytics_test_list_item_padding_v" >
+
+    <LinearLayout
+        android:id="@+id/test_name_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/overall_analytics_test_list_item_padding_v"
+        android:paddingRight="@dimen/overall_analytics_test_list_item_padding_right"
+        android:paddingTop="@dimen/overall_analytics_test_list_item_padding_v"
+
+        android:weightSum="1" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/overall_analytics_test_list_item_padding_left"
+            android:layout_weight=".75" >
+
+            <TextView
+                android:id="@+id/test_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/dummy_sub"
+                android:textColor="@color/darkergrey"
+                android:textSize="@dimen/overall_analytics_test_list_item_name_text_size" />
+
+            <TextView
+                android:id="@+id/test_taken_on_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/test_name"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/taken_on"
+                android:textColor="@color/green"
+                android:textSize="@dimen/overall_analytics_test_list_item_test_taken_text_size" />
+
+            <TextView
+                android:id="@+id/test_taken_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/test_taken_on_text"
+                android:layout_marginLeft="@dimen/overall_analytics_course_list_item_course_name_margin_right"
+                android:layout_toRightOf="@id/test_taken_on_text"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/dummy_time"
+                android:textColor="@color/green"
+                android:textSize="@dimen/overall_analytics_test_list_item_test_taken_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/test_marks_scored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier=".95"
+                android:text="@string/dummy_number"
+                android:textColor="@color/darkergrey"
+                android:textSize="@dimen/overall_analytics_test_list_item_marks_scored_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/test_marks_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/test_marks_scored"
+                android:layout_toRightOf="@id/test_marks_scored"
+                android:text="@string/dummy_number"
+                android:textColor="@color/darkergrey"
+                android:textSize="@dimen/overall_analytics_test_list_item_marks_total_text_size" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+
+        android:id="@+id/divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="@color/white" />
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/divider_gap"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/overall_analytics_test_list_item_padding_v" />
+
+</LinearLayout>

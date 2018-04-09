@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto" >
+
+    <LinearLayout
+        android:id="@+id/student_profile_study_history_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                style="@style/profile_avg_stats_layout"
+                android:background="@drawable/rounded_corner_profilepage" >
+
+                <ImageView
+                    android:id="@+id/avg_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerHorizontal="true"
+
+                    android:src="@drawable/profile_avg_marks" />
+
+                <TextView
+                 android:layout_marginTop="4dp"
+                    android:textColor="@color/white"
+                    android:layout_below="@+id/avg_mark"
+                    android:id="@+id/profile_avg_marks_head"
+                    style="@style/profile_avg_stats_head"
+                    android:text="@string/avg_marks_profile" />
+
+                <TextView
+                    android:id="@+id/profile_avg_marks"
+                    style="@style/profile_avg_stats_value"
+                    android:layout_below="@id/profile_avg_marks_head"
+                    android:text="@string/dummy_number" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginLeft="10dp"
+                style="@style/profile_avg_stats_layout"
+
+                android:background="@drawable/rounded_corner_profilepage_avgspeed" >
+
+                <ImageView
+                    android:id="@+id/avg_speed"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:src="@drawable/profile_avg_speed" />
+
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/white"
+                    android:layout_below="@+id/avg_speed"
+                    android:id="@+id/profile_avg_speed_head"
+                    style="@style/profile_avg_stats_head"
+                    android:text="@string/avg_speed_profile" />
+
+                <TextView
+
+                    android:id="@+id/profile_avg_speed"
+                    style="@style/profile_avg_stats_value"
+                    android:layout_below="@id/profile_avg_speed_head"
+                    android:text="@string/dummy_number" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    style="@style/profile_avg_stats_head"
+                    android:layout_below="@id/profile_avg_speed"
+                    android:layout_marginTop="0dp"
+                    android:paddingBottom="@dimen/profile_avg_stats_head_margin_top"
+                    android:text="@string/mins_per_question"
+                   />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginLeft="10dp"
+
+                style="@style/profile_avg_stats_layout"
+                android:background="@drawable/rounded_corner_profilepage_avgaccuracy" >
+
+                <ImageView
+                    android:id="@+id/avg_accuracy"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:src="@drawable/profile_avg_accuracy" />
+
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/avg_accuracy"
+                    android:textColor="@color/white"
+                    android:id="@+id/profile_avg_accuracy_head"
+                    style="@style/profile_avg_stats_head"
+                    android:text="@string/avg_accuracy_profile" />
+
+                <TextView
+                    android:id="@+id/profile_avg_accuracy"
+                    style="@style/profile_avg_stats_value"
+                    android:layout_below="@id/profile_avg_accuracy_head"
+                    android:text="@string/dummy_number" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/profile_study_history_head_margin_bottom"
+            android:layout_marginLeft="@dimen/profile_study_history_head_margin_left"
+            android:layout_marginTop="@dimen/profile_study_history_head_margin_top"
+            android:text="@string/my_study_history"
+            android:textColor="@color/darkestgrey"
+            android:textSize="@dimen/profile_study_history_head_font_size"
+            android:textStyle="bold" />
+
+        <com.nhance.android.customviews.CustomListView
+            android:id="@+id/profile_study_history_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/profile_study_history_head_margin_bottom"
+            android:layout_marginLeft="@dimen/profile_study_history_list_side_margin"
+            android:layout_marginRight="@dimen/profile_study_history_list_side_margin"
+            android:dividerHeight="2dp"
+            custom:scroll="false" >
+        </com.nhance.android.customviews.CustomListView>
+
+        <TextView
+            android:id="@+id/profile_no_study_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/profile_study_history_head_margin_bottom"
+            android:layout_marginLeft="@dimen/profile_study_history_list_side_margin"
+            android:layout_marginRight="@dimen/profile_study_history_list_side_margin"
+            android:layout_marginTop="@dimen/profile_no_study_history_margin_top"
+            android:text="@string/no_study_history"
+            android:textColor="@color/darkgrey"
+            android:textSize="@dimen/profile_no_study_history_font_size"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</merge>

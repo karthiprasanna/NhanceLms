@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/library_content_head"
+        style="@style/library_content_head"
+        android:visibility="gone" >
+    </TextView>
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+
+        card_view:cardCornerRadius="6dp"
+        card_view:cardElevation="4dp"
+        android:layout_marginTop="7dp">
+    <LinearLayout
+
+        android:id="@+id/library_content_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/selector_white_bg"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="@dimen/library_item_image_width"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/library_item_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#F5F5FA"
+                android:contentDescription="@string/img"
+                android:paddingLeft="@dimen/library_content_image_side_padding"
+                android:paddingRight="@dimen/library_content_image_side_padding"
+                android:scaleType="center"
+                android:src="@drawable/icon_book" >
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/library_item_image_sdcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/img"
+                android:paddingRight="@dimen/library_item_image_sdcard_padding_right"
+                android:paddingTop="@dimen/library_item_image_sdcard_padding_top"
+                android:scaleType="center"
+                android:src="@drawable/sdcard"
+                android:visibility="gone" >
+            </ImageView>
+        </RelativeLayout>
+        <View
+            android:layout_toRightOf="@+id/library_item_image"
+            android:layout_width="2dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="9dp"
+            android:background="#009688" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/library_item_title_margin_left"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/library_item_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/library_item_title_font_size" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/library_item_stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/library_item_stats_font_size" >
+            </TextView>
+
+            <RelativeLayout
+                android:id="@+id/library_content_progress_bar_holder"
+                android:layout_width="@dimen/library_content_module_progress_section_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/library_content_module_progress_section_margin_top"
+                android:visibility="gone" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/library_content_module_progress_height"
+                    android:background="@color/lightgrey" />
+
+                <View
+                    android:id="@+id/library_content_module_progress"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/library_content_module_progress_height"
+                    android:background="@color/darkgreen" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/library_item_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="-25dp"
+            android:contentDescription="@string/img"
+            android:paddingBottom="@dimen/library_item_info_padding"
+            android:paddingLeft="@dimen/library_item_info_padding"
+            android:paddingRight="@dimen/library_item_info_padding"
+            android:paddingTop="@dimen/library_item_info_padding"
+            android:src="@drawable/icon_info" >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/library_item_starred"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/starred"
+            android:scaleType="fitStart"
+            android:src="@drawable/starred_item" >
+        </ImageView>
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

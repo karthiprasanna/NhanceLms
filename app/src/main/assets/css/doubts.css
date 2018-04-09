@@ -1,0 +1,351 @@
+body {
+	margin: 0;
+	word-wrap: break-word;
+	font-family:Roboto;
+	background-color:#EEEEEE;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.RTEArea img{
+	max-width:90%;
+	border:1px solid #CCCCCC;
+}
+.RTEImageDiv img{
+	border:1px solid #CCCCCC;
+}
+.doubt img, #doubtPage img {
+	max-width: 100%;
+}
+img {
+	background-color:#CCC;
+}
+#doubtsHolder,
+#doubtPage{
+	background-color:#EEEEEE;
+	max-width:100%;
+	overflow-x:hidden;
+}
+.nonner {
+	display: none;
+}
+.boldy{
+	font-weight:bold;
+}
+.loadingStyles {
+	color: #999999;
+	text-align: center;
+}
+.redTextColor{
+	color:#FF6666;
+}
+.doubtsZeroLevel{
+	color: #999;
+	text-align:center;
+	width:100%;
+}
+.sadSmiley{
+	background-image: url("file:///android_asset/images/sad_smiley.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	height:65px;
+}
+.alignTop{
+	vertical-align:top;
+}
+.doubt {
+	border-bottom: 1px solid #DDDDDD;
+	word-wrap: break-word;
+	background-color:#FFF;
+	overflow:hidden;
+}
+.doubtTitle,
+.doubtBody{
+	/*max-width:300px;*/
+	max-width:100%;
+	overflow:hidden;
+}
+
+.doubtImgTd {
+	vertical-align: top;
+}
+.doubtUserImg{
+	display:inline-block;
+}
+.doubtMainSec {
+	overflow:hidden;
+}
+.doubtTime, .doubtAnsTime,.doubtBy{
+	color: #999999;
+}
+.doubtRef {
+	color: #CC0000;
+}
+.doubtTitle {
+	color: #333333;
+	font-weight: bold;
+}
+.doubtBody {
+	color: #666666;
+}
+.doubtTag {
+	display: inline-block;
+}
+.doubtSubjectTag {
+	/*background-color: #116699;*/
+	background-color: rgba(70,102,153,0.6);
+	color:#FFFFFF;
+}
+.doubtTopicTag {
+	/*background-color: #0099CC;*/
+	background-color: rgba(70,102,153,0.2);
+	color:#116699;
+}
+.doubtStatSec {
+}
+.doubtFollowerCountDiv,
+.doubtAnsCountDiv {
+	color: #CCCCCC;
+}
+.doubtAnsCountDiv.active {
+	color: #669900;
+}
+.doubtFollowerCountDiv.active {
+	color: #116699;
+}
+.doubtAnsCount, .doubtFollowerCount {
+	font-weight: bold;
+}
+.loadMoreDoubtsStyles {
+	background-color: #EEEEEE;
+	font-size: 18px;
+	margin: 30px auto 50px;
+	padding: 12px 0;
+	text-align: center;
+	width: 500px;
+}
+.followersText,
+.answersText{
+	color:#333;
+	font-weight:bold;
+}
+.doubtPageAnsHead {
+	color: #333333;
+	font-size: 26px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+.unfollowDoubtBtn,
+.followDoubtBtn,
+.addAnsButton {
+	background-color: #0099CC;
+	color: #FFFFFF;
+	float: right;
+	font-weight: bold;
+	text-align: center;
+}
+.addAnsButton:active {
+	background-color: #33B5E5;
+}
+.followDoubtBtn{
+	background-color:#99CC00;
+}
+.followDoubtBtn:active {
+	background-color: #C4E399;
+}
+.unfollowDoubtBtn{
+	background-color:#FF4444;
+}
+.unfollowDoubtBtn:active {
+	background-color: #FF6666;
+}
+.doubtFollower,
+.doubtAns {
+	border-bottom: 1px solid #CCC;
+}
+.doubtFollower:last-child,
+.doubtAns:last-child {
+	border-bottom: none;
+}
+.doubtFlwMainSec,
+.doubtAnsMainSec {
+	max-width:100%;
+	overflow:hidden;
+}
+.doubtFlwBy{
+	color:#333333;
+}
+.doubtFlwByProfileDiv{
+	color:#666666;
+}
+.doubtAnsBody {
+	color: #666;
+}
+.doubtAnsStatsSec {
+	color: #116699;
+}
+.doubtAnsReplyCountDiv {
+	border-right: 1px solid #CCC;
+}
+.doubtAnsReplySubmitButtonDiv{
+	padding-top:8px;
+}
+.doubtAnsReplyCountDivActive {
+	background-color: #FFF;
+}
+.spriteImage{
+	background-image: url("file:///android_asset/images/doubts_sprite.png");
+	background-repeat: no-repeat;
+	vertical-align: top;
+	display: inline-block;
+	font-size:1px;
+}
+/* REPLY SEC */
+.doubtAnsRepliesSec {
+	background-color: #FFFFFF;
+	max-width:100%;
+}
+.doubtAnsReplyMainSec {
+	background-color: rgba(255, 255, 255, 0.5);
+	color: #333333;
+	position: relative;
+	max-width:80%;
+}
+.doubtAnsReplyTime {
+	color: #999999;
+}
+.doubtAnsReplyBy {
+	color: #999999;
+}
+.doubtAnsReplyPostSec {
+	width: 100%;
+}
+.doubtAnsReplyBody{
+	color:#666;
+}
+.doubtAnsReplyPostArea {
+	border: none;
+	outline:none;
+	border-top:1px solid #DDD;
+	border-left:1px solid #DDD;
+	resize: none;
+	font-size:15px;
+	height:15px;
+	width: 95%;
+	padding:3px 8px;
+	background-color:#EEE;
+}
+.doubtAnsReplySubmitButtonDiv {
+	display:none;
+}
+.doubtAnsReplySubmitButton {
+	background-color: #99CC00;
+	color: #FFFFFF;
+	text-align: center;
+	vertical-align: super;
+}
+.doubtAnsReplyPostSecDisabled .doubtAnsReplySubmitButton {
+	background-color: #DDDDDD;
+}
+.replyStore {
+	display: none;
+	font-family: arial;
+	font-size: 15px;
+	line-height: 18px;
+}
+/*add doubt*/
+.greenButton, .grayButton {
+	cursor: pointer;
+	display: inline-block;
+	overflow: hidden;
+	text-align: center;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.greenButton {
+	background-color: #8CC750;
+	color: #FFFFFF;
+}
+.grayButton {
+	background-color: #CCCCCC;
+	color: #333333;
+}
+/* RTE CSS */
+.RTEToolBar {
+        background-color: #DDDDDD;
+        box-shadow: none;
+        color: #666666;
+        font-size: 14px;
+        padding: 0;
+}
+
+.RTEAddDiagram {
+        cursor: pointer;
+        padding: 6px 18px;
+        display:inline-block;
+	float:right;
+	border:0px;
+	border-left:1px solid #bbb;
+	outline:none;
+	background-color:transparent;
+}
+.RTEAddDiagram:active {
+        background-color: #EEEEEE;
+}
+.addDiagramImg {
+        background-image:url("../images/add_doubt_sprite.png");
+        background-position: -406px -2px;
+        display: inline-block;
+        height: 16px;
+        margin: 0;
+        vertical-align: middle;
+        width: 15px;
+}
+.addFormulaImg {
+        background-position: -333px -1px;
+}
+.RTEArea {
+        min-height: 100px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	background-color:#FFFFFF;
+	border:1px solid #DDD;
+}
+.selectTag:focus,
+.askDoubtTitleInput:focus,
+.RTEArea:focus{
+	outline:0px;
+	outline:none;
+	border:1px solid #666;
+}
+.cleaner_with_divider{
+	clear:both;
+	float:none;
+	font-size:0px;
+	height:0px;
+	width:0px;
+}
+.askDoubtTitleInput{
+	width:95%;
+	background-color:#FFF;
+	border:1px solid #DDD;
+}
+.selectTag{
+	color:#333;
+	font-size:11px;
+	width:48%;
+	background-color:#FFF;
+	border:1px solid #DDD;
+	border-radius:0px;
+	height:100%;
+	white-space:nowrap;
+}
+.MathJax_Display {
+	text-align: center;
+	margin: 1em 0em;
+	position: relative;
+	display: block;
+	width: 100%;
+}
+div.MathJax_Display {
+	display: inline;
+}

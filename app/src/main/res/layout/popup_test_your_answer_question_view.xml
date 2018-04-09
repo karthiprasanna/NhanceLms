@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/your_answer_gird_view_question_popup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/test_answer_popup_padding_top" >
+
+    <ImageView
+        android:id="@+id/popup_close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/test_answer_popup_close_button_margin_top"
+        android:contentDescription="@string/close"
+        android:padding="@dimen/test_answer_popup_close_padding"
+        android:paddingRight="@dimen/test_answer_popup_close_button_margin_right"
+        android:src="@drawable/cross" />
+
+    <TextView
+        android:id="@+id/test_question_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/test_answer_popup_margin_left"
+        android:layout_marginRight="@dimen/test_answer_popup_ans_info_margin_between_content"
+        android:layout_marginTop="@dimen/test_answer_popup_margin_top"
+        android:text="@string/dummy_number"
+        android:textColor="@color/darkergrey"
+        android:textSize="@dimen/test_answer_popup_qus_no_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/test_question_course_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/test_question_no"
+        android:layout_toRightOf="@+id/test_question_no"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="@string/dummy_sub"
+        android:textAllCaps="true"
+        android:textColor="@color/darkergrey"
+        android:textSize="@dimen/test_answer_popup_qus_no_size" />
+
+    <LinearLayout
+        android:id="@+id/test_your_ans_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/test_question_no"
+        android:layout_below="@+id/test_question_course_name"
+        android:layout_marginTop="@dimen/test_answer_popup_ans_info_margin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/test_question_your_answer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/test_answer_popup_ans_info_margin_between_content"
+            android:gravity="center_vertical"
+            android:text="@string/your_answer"
+            android:textColor="@color/darkred"
+            android:textSize="@dimen/test_answer_popup_ans_info_size" />
+
+        <TextView
+            android:id="@+id/test_question_your_answer_value"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/test_answer_popup_ans_info_margin_between_ans_type"
+            android:gravity="center_vertical"
+            android:text="@string/dummy_char"
+            android:textColor="@color/darkred"
+            android:textSize="@dimen/test_answer_popup_ans_info_size" />
+
+        <TextView
+            android:id="@+id/test_question_correct_answer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/test_answer_popup_ans_info_margin_between_content"
+            android:gravity="center_vertical"
+            android:text="@string/correct_answer"
+            android:textColor="@color/darkblue"
+            android:textSize="@dimen/test_answer_popup_ans_info_size" />
+
+        <TextView
+            android:id="@+id/test_question_correct_answer_value"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/dummy_char"
+            android:textColor="@color/darkblue"
+            android:textSize="@dimen/test_answer_popup_ans_info_size" />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/test_question_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/test_your_ans_info_container"
+        android:layout_marginTop="@dimen/test_answer_popup_question_body_margin_top"
+        android:background="@color/white"
+        android:gravity="right"
+        android:visibility="visible" >
+    </WebView>
+
+</RelativeLayout>

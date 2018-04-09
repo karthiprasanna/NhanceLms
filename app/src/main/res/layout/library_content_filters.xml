@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/navigation_menu_head" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/star_device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/library_content_types_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/darkergrey" />
+
+            <LinearLayout
+                android:id="@+id/library_show_starred_content"
+                style="@style/library_filter_holder" >
+
+                <ImageView
+                    style="@style/library_filter_image"
+                    android:src="@drawable/staricon1"
+                    />
+
+                <TextView
+                    style="@style/library_filter_text"
+                    android:text="@string/starred" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/library_show_on_device_content"
+                style="@style/library_filter_holder" >
+
+                <ImageView
+                    style="@style/library_filter_image"
+                    android:src="@drawable/download_on_device" />
+
+                <TextView
+                    style="@style/library_filter_text"
+                    android:text="@string/on_device" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

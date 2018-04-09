@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BarGraphView">
+        <attr name="graphColor" format="color" />
+        <attr name="titleBgColor" format="color" />
+        <attr name="titleColor" format="color" />
+        <attr name="percentageTextColor" format="color" />
+        <attr name="percentageTextSize" format="dimension" />
+        <attr name="maxNoOfGraphs" format="integer" />
+        <attr name="xAxisTitle" format="string" />
+    </declare-styleable>
+    <declare-styleable name="PieChartView">
+        <attr name="chartType" format="integer">
+            <enum name="pie" value="0" />
+            <enum name="donut" value="1" />
+        </attr>
+        <attr name="fillColor" format="color" />
+        <attr name="innerShift" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="CustomListView">
+        <attr name="scroll" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableTextView">
+        <attr name="trimLength" format="integer"/>
+    </declare-styleable>
+
+    <item name="test_analytics_weight_left" type="integer">56</item>
+    <item name="test_analytics_weight_right" type="integer">44</item>
+    <item name="overall_analytics_level_name_weight" type="integer">55</item>
+    <item name="overall_analytics_level_accuracy_weight" type="integer">20</item>
+    <item name="overall_analytics_level_speed_weight" type="integer">25</item>
+    <item name="overall_analytics_level_sum_weight" type="integer">100</item>
+
+    <integer name="doubt_brd_id_key">1010</integer>
+    <integer name="doubt_brd_type_key">1011</integer>
+    <integer name="doubt_brd_selected">1012</integer>
+    <integer name="question_info_key">1013</integer>
+    <integer name="question_measures_key">1014</integer>
+    <integer name="question_id_key">1015</integer>
+    <integer name="section_info_key">1017</integer>
+    <integer name="section_id_key">1017</integer>
+    <integer name="center_id_key">1019</integer>
+    <integer name="program_id_key">1021</integer>
+    <integer name="org_ids_key">1023</integer>
+
+    <drawable name="whiteColor">#FFFFFF</drawable>
+    <drawable name="blackColor">#000000</drawable>
+
+
+
+
+</resources>

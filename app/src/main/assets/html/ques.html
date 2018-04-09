@@ -1,0 +1,72 @@
+<html>
+<head>
+<script type="text/javascript"
+	src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/ques.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="../css/ques.css">
+<script type="text/javascript">
+	var filePath = "file:///android_asset/css/";
+	function loadDimensionFiles(dimension) {
+		/*var filename = filePath + "ques_" + dimension + ".css";
+		var fileref = document.createElement("link")
+		fileref.setAttribute("rel", "stylesheet")
+		fileref.setAttribute("type", "text/css")
+		fileref.setAttribute("href", filename)
+		document.getElementsByTagName("head")[0].appendChild(fileref);*/
+	};
+</script>
+</head>
+<body ontouchstart="">
+	<table id="answersHolder">
+	   <tr>
+		<td class="yourAnswer">
+			<span>YOUR ANSWER</span>
+			<span class="value"></span>
+		</td>
+		<td class="correctAnswer">
+			<span>CORRECT ANSWER</span>
+			<span class="value"></span>
+		</td>
+	   </tr>
+	</table>
+	<div id="ques">
+		<div id="quesBody"></div>
+		<table id="quesOpts" cellspacing="0" style="display: none">
+			<tbody></tbody>
+		</table>
+	</div>
+	<div id="questionSolutionDiv" class="nonner">
+		<div class="quesSolnHead">Solution:</div>
+		<div id="questionSolution"></div>
+	</div>
+	<div id='htmlDecode' style="display: none;"></div>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			extensions : [ "tex2jax.js" ],
+			jax : [ "input/TeX", "output/HTML-CSS" ],
+			tex2jax : {
+				displayMath : [],
+				inlineMath : [ [ '$$', '$$' ], [ "\\[", "\\]" ], [ '$', '$' ],
+						[ "\\(", "\\)" ] ],
+				processEscapes : true
+			},
+			TeX : {
+				extensions : [ "AMSmath.js", "AMSsymbols.js", "noErrors.js",
+						"noUndefined.js" ]
+			},
+			"HTML-CSS" : {
+				linebreaks : {
+					automatic : true
+				},
+				scale : 100
+			},
+			messageStyle: "none",
+			showMathMenu: false
+		});
+	</script>
+	<script type="text/javascript"
+		src="../js/MathJax/MathJax.js">
+	</script>
+</body>
+</html>

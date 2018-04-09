@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgrey"
+    tools:context="com.nhance.android.recentActivities.AddFeedActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+        <TextView
+            android:id="@+id/discussionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/discussion"
+            android:textSize="@dimen/add_new_feed"
+            android:textColor="@color/black"
+            android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/discussionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="top"
+            android:padding="5dp"
+            android:hint="@string/editTextHint"
+            android:textColorHint="@color/light_gray"
+            android:background="@drawable/edit_text_background"
+            android:layout_below="@+id/discussionTextView"
+            android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/uploadImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Image"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:layout_below="@+id/discussionEditText"
+        android:background="@drawable/btn_rounded_corner"
+        android:layout_marginBottom="30dp"/>
+
+    <LinearLayout
+        android:id="@+id/imageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@+id/uploadImageButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="30dp">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/default_profile_pic"
+        />
+
+        <ImageView
+            android:id="@+id/deleteImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/delete1"
+            />
+
+
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/shareWithTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shareWith"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/imageLayout"
+            android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/shareWithTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/shareWithTitle"
+        android:layout_alignBaseline="@+id/shareWithTitle"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/ProgramTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/programTitle"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/shareWithTitle"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/spinnerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_weight="1"
+        android:layout_below="@+id/ProgramTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp">
+
+    <Spinner
+        android:id="@+id/program_list_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="gravity"
+        android:textDirection="ltr"
+        android:overlapAnchor="false"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/centersLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerLayout"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp">
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/centersLayout"
+        android:background="@drawable/btn_rounded_corner"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"
+        android:text="@string/shareButtonText"/>
+</RelativeLayout>
+
+</ScrollView>

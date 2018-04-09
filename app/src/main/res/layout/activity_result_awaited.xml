@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefreshLayoutmsg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@color/light_gray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+       android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner2"
+
+                android:gravity="right|center_vertical"
+                android:paddingRight="@dimen/doubts_filter_right_pad">
+
+                <Spinner
+
+                    android:id="@+id/yc_recent_popular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/doubts_list_filter"
+                    android:gravity="left"
+                    android:textAlignment="gravity"
+                    android:textDirection="ltr" />                 <!--android:entries="@array/doubts_list_filter"-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+
+                android:gravity="right|center_vertical"
+                android:paddingRight="@dimen/doubts_filter_right_pad">
+
+                <Spinner
+                    android:id="@+id/ycspin_sublist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textAlignment="gravity"
+                    android:textDirection="ltr" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/result_wait"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:background="@drawable/rounded_corner2"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Result Awaited"
+            android:textColor="@color/red"
+            android:textSize="@dimen/challenge_text_size"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/activie_rcrecyclerview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="20dp"
+                android:scrollbars="vertical"
+                android:visibility="visible"></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/result_awaited_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="No Challenge Available"
+                android:textColor="@color/black"
+                android:textSize="@dimen/challenge_text_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

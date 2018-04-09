@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/video_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+
+        android:background="@drawable/rounded_corner2"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/video_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_sub"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/darkblue"
+            android:maxLines="1"
+            android:ellipsize="marquee"
+            android:textSize="@dimen/video_name_text_size" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/video_duration_margin_top"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="@string/source"
+                android:textColor="@color/darkergrey"
+                android:textSize="@dimen/video_desc_text_size" />
+
+            <TextView
+                android:id="@+id/video_added_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummy_source"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/darkergrey"
+                android:textSize="@dimen/video_desc_text_size" />
+        </LinearLayout>
+
+        <com.nhance.android.customviews.ExpandableTextView
+            android:id="@+id/video_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/dummy_big_string"
+            android:textColor="@color/darkgrey"
+            android:textSize="@dimen/video_desc_text_size" />
+
+    </LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_library_content_progress"
+        android:actionLayout="@layout/progress_bar_in_action_bar"
+        app:showAsAction="ifRoom"
+        android:title="@string/loading"/>
+    <item
+        android:id="@+id/search_library"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="always"
+        android:title="@string/search"/>
+    <item
+        android:id="@+id/show_sorting_options"
+        android:icon="@drawable/abs__ic_menu_moreoverflow_normal_holo_light"
+        app:showAsAction="always"
+        android:title="@string/show_sorting_options">
+        <menu>
+            <item
+                android:id="@+id/show_custom_order"
+                android:title="@string/custom_order"/>
+            <item
+                android:id="@+id/show_alphabetical"
+                android:title="@string/alphabetical"/>
+            <item
+                android:id="@+id/show_recently_added"
+                android:title="@string/recently_added"/>
+            <item
+                android:id="@+id/show_recently_viewed"
+                android:title="@string/recently_viewed"/>
+            <item
+                android:id="@+id/logout"
+                android:title="@string/action_logout"/>
+        </menu>
+    </item>
+
+</menu>

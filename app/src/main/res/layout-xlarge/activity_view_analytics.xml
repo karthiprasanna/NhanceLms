@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+    android:padding="5dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        card_view:cardCornerRadius="0dp"
+        card_view:contentPadding="2dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:weightSum="1"
+        android:id="@+id/imgid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/ass_thumbnail"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/default_profile_pic"
+
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/image_details"
+        android:layout_toRightOf="@+id/imgid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+     >
+
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="20dp"
+            android:id="@+id/ass_firstname"
+            android:text="@string/first_name"
+            android:textColor="@color/blue"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:id="@+id/user_details"
+        android:layout_below="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="left"
+
+
+        >
+        <TextView
+            android:textColor="@color/slpdarkgreen"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profilename"
+            android:id="@+id/ass_profile"
+
+            />
+
+        <TextView
+            android:textColor="@color/black"
+
+            android:layout_toRightOf="@+id/ass_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ass_dot"
+            android:textSize="20dp"
+            android:text=","/>
+
+        <TextView
+            android:textColor="@color/slpdarkgreen"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/ass_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ass_name"
+            android:text="@string/program"/>
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:paddingTop="5dp"
+        android:layout_below="@+id/image_details"
+        android:id="@+id/process"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        >
+        <ProgressBar
+            android:id="@+id/pb_drawable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+
+            android:progressDrawable="@drawable/progress_states"
+            />
+    </RelativeLayout>
+
+
+        <View
+            android:layout_marginTop="10dp"
+            android:id="@+id/dividerView2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/process"
+            android:background="@color/grey"
+            />
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/lin_youranswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dividerView2"
+            android:weightSum="100"
+            android:orientation="horizontal">
+            <View
+                android:id="@+id/dividerView5"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/upVOteLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center">
+
+                <TextView
+                    android:textSize="20dp"
+                    android:id="@+id/txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/ass_correct"
+                    android:textColor="@color/green"
+                     />
+
+                <TextView
+                    android:textSize="20dp"
+                    android:id="@+id/ass_correct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:textColor="@color/green"
+                     />
+
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/dividerView3"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                />
+
+            <LinearLayout
+                android:id="@+id/txt2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:textSize="20dp"
+                    android:id="@+id/comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/ass_incorrect"
+                    android:textColor="@color/red"
+                    />
+
+                <TextView
+                    android:textSize="20dp"
+                    android:id="@+id/ass_incorrect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:textColor="@color/red"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/dividerView6"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_below="@id/lin_youranswer"
+            android:id="@+id/dividerView4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            />
+
+
+
+
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+
+</RelativeLayout>

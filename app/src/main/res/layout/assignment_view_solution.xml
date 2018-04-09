@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/emptymsg_solution"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/assignmet_text_size"
+        android:text="No Solutions Available."/>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipelayout"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/post_btn"
+        android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/solution_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+
+
+        >
+
+    </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <RelativeLayout
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:id="@+id/post_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/light_gray"
+        >
+
+
+        <EditText
+
+            android:id="@+id/post_assignment_comment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/Etextsub"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_corner2"
+            android:gravity="top|left"
+            android:hint=" Type Solution:"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="10dp"
+
+
+            android:scrollbars="vertical"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+
+
+            />
+
+
+
+        <ImageView
+            android:id="@+id/comment_send_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="6dp"
+            android:src="@drawable/send_icon" />
+
+        <ImageView
+            android:id="@+id/select_image"
+
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:paddingTop="6dp"
+            android:src="@drawable/camera"
+
+
+            />
+
+
+
+
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/delete_btn_layout"
+            android:gravity="left"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/post_btn">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/comment_img"/>
+
+            <ImageView
+                android:id="@+id/comment_delete_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="Delete"
+                android:padding="10dp"
+                android:textSize="@dimen/assignmet_text_size"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/delete1"
+                />
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
+

@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+<android.support.v7.widget.CardView android:id="@+id/card_view"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/test_pre_list_item_vertical_padding"
+    android:paddingLeft="@dimen/test_pre_list_item_side_padding"
+    android:paddingRight="@dimen/test_pre_list_item_side_padding"
+    android:paddingTop="@dimen/test_pre_list_item_vertical_padding" >
+
+
+
+    <ImageView
+        android:id="@+id/test_pre_subject_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/open"
+        android:src="@drawable/icon_navigation_next_item" />
+
+    <TextView
+        android:id="@+id/test_pre_subject_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/test_pre_subject_arrow"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/dummy_big_string"
+        android:textColor="@color/darkyellow"
+        android:textSize="@dimen/test_pre_subject_font_size" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/test_pre_subject_name"
+        android:layout_marginTop="@dimen/test_pre_list_item_stats_margin_top"
+        android:layout_toLeftOf="@id/test_pre_subject_arrow"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/test_pre_list_item_stats_head"
+            android:text="@string/marks_colon_caps" />
+
+        <TextView
+            android:id="@+id/test_pre_list_item_marks"
+            style="@style/test_pre_list_item_stats_value"
+            android:text="@string/dummy_number" />
+
+        <TextView
+            style="@style/test_pre_list_item_stats_head"
+            android:layout_marginLeft="@dimen/test_pre_list_item_stats_spacing"
+            android:text="@string/questions_colon_caps" />
+
+        <TextView
+            android:id="@+id/test_pre_list_item_questions"
+            style="@style/test_pre_list_item_stats_value"
+            android:text="@string/dummy_number" />
+    </LinearLayout>
+</RelativeLayout>
+</android.support.v7.widget.CardView>
+
+
+    </LinearLayout>

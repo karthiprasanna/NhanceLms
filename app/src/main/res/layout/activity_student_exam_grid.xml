@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nhance.android.QuestionCount.QuestionViewActivity">
+    <LinearLayout
+        android:id="@+id/text_attempt_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/test_answer_status_idicator_margin_vertical"
+        android:layout_marginTop="@dimen/test_answer_status_idicator_margin_vertical"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:layout_width="@dimen/test_answer_status_idicator_size"
+            android:layout_height="@dimen/test_answer_status_idicator_size"
+            android:layout_marginRight="@dimen/test_answer_status_idicator_text_margin"
+            android:background="@drawable/rounded_corner_question" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/test_answer_status_idicator_margin_horizontal"
+            android:text="@string/attempt"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/test_answer_status_idicator_text_size" />
+
+        <TextView
+            android:layout_width="@dimen/test_answer_status_idicator_size"
+            android:layout_height="@dimen/test_answer_status_idicator_size"
+            android:layout_marginRight="@dimen/test_answer_status_idicator_text_margin"
+            android:background="@drawable/rounded_corner_green" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/test_answer_status_idicator_margin_horizontal"
+            android:text="@string/notattempt"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/test_answer_status_idicator_text_size" />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="@dimen/test_answer_status_idicator_size"
+            android:layout_height="@dimen/test_answer_status_idicator_size"
+            android:layout_marginRight="@dimen/test_answer_status_idicator_text_margin"
+            android:background="@color/grey" />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/left"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/test_answer_status_idicator_text_size" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:layout_below="@+id/text_attempt_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightergrey"
+        android:id="@+id/text_spinner_layout"
+        >
+        <Spinner
+            android:visibility="visible"
+            android:id="@+id/text_question_attempt_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textAlignment="gravity"
+            android:textDirection="ltr"
+            android:gravity="left"/>
+
+        <Spinner
+            android:visibility="visible"
+            android:id="@+id/text_question_subject_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="gravity"
+            android:layout_alignParentRight="true"
+            android:textDirection="ltr"
+            android:gravity="right"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/text_emptymsg_solution"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/assignmet_text_size"
+        android:text="No question attempted."/>
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/text_unattempted"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/assignmet_text_size"
+        android:text="All question attempted."/>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_below="@id/text_attempt_color"
+
+        android:id="@+id/text_swipelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.nhance.android.customviews.NonScrollableGridView
+            android:id="@+id/text_question_answers"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/test_answer_course_list_item_qus_ans_margin_top"
+            android:columnWidth="@dimen/test_answer_course_list_item_qus_ans_box_size"
+            android:horizontalSpacing="@dimen/test_answer_course_list_item_qus_ans_box_spacing_h"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/test_answer_course_list_item_qus_ans_box_spacing_v" >
+        </com.nhance.android.customviews.NonScrollableGridView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

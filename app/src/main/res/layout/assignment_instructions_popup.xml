@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/login_inputpage_white_bkg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/close_assignment_popup"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/popup_cross_margin_right"
+        android:layout_marginTop="@dimen/popup_cross_margin_top"
+        android:background="@drawable/selector_blue_onpress"
+        android:contentDescription="@string/close"
+        android:padding="@dimen/popup_cross_padding"
+        android:src="@drawable/cross1" />
+
+    <LinearLayout
+        android:id="@+id/assignment_popup_page_tracker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/assignment_popup_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/assignment_popup_page_tracker"
+        android:layout_marginBottom="@dimen/test_popup_title_margin_bottom"
+        android:gravity="center_horizontal"
+        android:text="@string/instructions_caps"
+        android:textColor="@color/darkergrey"
+        android:textSize="@dimen/test_popup_title_font_size"
+        android:textStyle="bold" />
+
+    <!--
+         <ImageView
+        android:id="@+id/assignment_popup_view_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/assignment_popup_got_it"
+        android:layout_below="@id/assignment_popup_title"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/how_to_take_assignment1" />
+    -->
+
+    <RelativeLayout
+        android:id="@+id/assignment_popup_buttons_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/test_popup_got_it_vertical_margin"
+        android:layout_marginTop="@dimen/test_popup_got_it_vertical_margin"
+        android:gravity="center"
+        android:background="@drawable/rounded_corner"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/assignment_popup_got_it"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rounded_corner"
+            android:paddingBottom="@dimen/test_popup_got_it_vertical_padding"
+            android:paddingLeft="@dimen/test_popup_got_it_side_padding"
+            android:paddingRight="@dimen/test_popup_got_it_side_padding"
+            android:paddingTop="@dimen/test_popup_got_it_vertical_padding"
+            android:text="@string/got_it"
+            android:textColor="@color/white"
+            android:textSize="@dimen/test_popup_got_it_font_size"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/assignment_popup_swipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/icon_navigation_previous_item"
+            android:drawablePadding="@dimen/login_landing_page_swipe_drawable_padding"
+            android:gravity="center_vertical"
+            android:text="@string/swipe"
+            android:textColor="@color/lightgrey"
+            android:textSize="@dimen/login_landing_page_swipe_font_size" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/assignment_popup_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/assignment_popup_buttons_holder"
+        android:layout_below="@id/assignment_popup_title" >
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

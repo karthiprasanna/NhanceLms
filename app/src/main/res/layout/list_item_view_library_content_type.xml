@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/library_filter_holder" >
+
+    <ImageView
+        android:id="@+id/library_filter_image"
+        style="@style/library_filter_image" />
+
+    <TextView
+        android:id="@+id/library_filter_text"
+        style="@style/library_filter_text" />
+
+</LinearLayout>

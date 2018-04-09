@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="#ddd"
+android:layout_margin="5dp"
+    android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_margin="5dp"
+            android:id="@+id/content_student_performance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <LinearLayout
+
+                android:background="@color/white"
+                android:id="@+id/ass_ques"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+
+
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_gravity="right"
+                    android:textColor="@color/slpdarkgreen"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/solutions"/>
+
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/ass_questionsolutions"
+                    android:textColor="@color/slpdarkgreen"
+                    android:gravity="center"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:id="@+id/questionid"
+                    android:layout_gravity="right"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+                <TextView
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:id="@+id/boardsubjectId"
+                    android:layout_gravity="right"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_marginLeft="30dp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="left"
+                    android:text=""
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/status"
+                    />
+
+                <TextView
+                    android:textColor="@color/orange"
+                    android:id="@+id/ass_questiontype"
+                    android:gravity="right"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/type_caps"/>
+            </LinearLayout>
+            <View
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:id="@+id/view2"
+                android:layout_below="@+id/ass_ques"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                >
+
+            </View>
+
+            <WebView
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:layout_below="@+id/view2"
+                android:layout_marginLeft="0dp"
+                android:textColor="@color/black"
+                android:id="@+id/ass_questionname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 />
+
+
+            <View
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/ass_questionname"
+                android:background="@color/grey"
+                >
+
+            </View>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/ass_questionname"
+                android:id="@+id/ans_gridview"
+                >
+
+                <com.nhance.android.assignment.MyGridView
+
+                    android:id="@+id/ass_gridView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="1"
+                    android:stretchMode="columnWidth"
+                    >
+
+                </com.nhance.android.assignment.MyGridView>
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+<LinearLayout
+    android:visibility="gone"
+    android:id="@+id/lin_youranswer"
+    android:layout_margin="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        />
+
+    <LinearLayout
+        android:background="@color/white"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey"
+            />
+
+        <LinearLayout
+            android:id="@+id/upVOteLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/upVote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="@string/youranswer"
+                android:textColor="@color/blue"
+                />
+
+
+
+            <TextView
+                android:id="@+id/ass_uranswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textColor="@color/blue"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey"
+            />
+
+        <LinearLayout
+            android:id="@+id/commentsLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="@string/correctanswer"
+
+                android:textColor="@color/green"
+                />
+
+
+
+            <TextView
+                android:id="@+id/ass_crtanser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:text="0"
+                android:textColor="@color/green"
+                />
+
+        </LinearLayout>
+        <View
+            android:id="@+id/dividerView4"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey"
+            />
+
+
+    </LinearLayout>
+
+
+    <View
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        />
+</LinearLayout>
+
+
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:id="@+id/ass_btn"
+        android:gravity="center"
+        android:layout_below="@id/lin_youranswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/assignment_attempts"
+            android:text="@string/attempts"
+            android:background="@color/blue"
+            android:textColor="@color/white"/>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:id="@+id/ass_reattemptbtn"
+        android:gravity="center"
+        android:layout_below="@id/lin_youranswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/assignment_reattempts"
+            android:text="@string/reAttempts"
+            android:background="@color/blue"
+            android:textColor="@color/white"/>
+
+
+
+
+    </LinearLayout>
+</LinearLayout>
+
+

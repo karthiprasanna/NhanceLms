@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="20dp" >
+
+    <ImageView
+        android:id="@+id/close_user_guide_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/popup_cross_margin_right"
+        android:layout_marginTop="@dimen/popup_cross_margin_top"
+        android:background="@drawable/selector_blue_onpress"
+        android:contentDescription="@string/close"
+        android:padding="@dimen/popup_cross_padding"
+        android:src="@drawable/cross" />
+
+    <LinearLayout
+        android:id="@+id/user_guide_popup_page_tracker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/test_popup_tracker_vertical_margin"
+        android:layout_marginTop="@dimen/test_popup_tracker_vertical_margin"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <!--
+         <ImageView
+        android:id="@+id/test_popup_view_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/user_guide_popup_page_tracker"
+        android:layout_below="@id/close_user_guide_popup"
+        android:layout_marginLeft="@dimen/test_popup_side_padding"
+        android:layout_marginRight="@dimen/test_popup_side_padding"
+        android:src="@drawable/how_to_use_app1" />
+    -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/user_guide_popup_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/user_guide_popup_page_tracker"
+        android:layout_below="@id/close_user_guide_popup"
+        android:layout_marginBottom="20dp">
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

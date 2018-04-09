@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/assignment_analytics"
+        android:icon="@drawable/assignment_analytics"
+        app:showAsAction="always"
+        android:visible="true"
+        android:title="@string/view_analytics"/>
+
+<!--
+    <item
+        android:id="@+id/name"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always"
+        android:title="@string/search"/>
+-->
+
+
+</menu>

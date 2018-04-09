@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/emptymsg_solution"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/assignmet_text_size"
+        android:text="No Solutions Available."/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/question_solution_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:layout_above="@+id/post_btn"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <RelativeLayout
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:id="@+id/post_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/send_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/question_post_question_comment">
+
+            <ImageView
+                android:id="@+id/question_comment_send_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send"
+                android:textSize="@dimen/assignmet_text_size"
+                android:background="@drawable/send_icon"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentRight="true"
+                />
+            <ImageView
+                android:id="@+id/question_select_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Image"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/assignmet_text_size"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:background="@drawable/camera" />
+            <EditText
+
+                android:id="@+id/question_post_question_comment"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/Etextsub"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_corner2"
+                android:gravity="top|left"
+                android:hint="Type solutions:"
+                android:inputType="textMultiLine"
+                android:singleLine="false"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="10dp"
+
+
+                />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/delete_btn_layout"
+            android:gravity="left"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/send_upload">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/question_comment_img"/>
+
+            <ImageView
+                android:id="@+id/question_comment_delete_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:padding="10dp"
+                android:textSize="@dimen/assignmet_text_size"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/delete1"
+                />
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
+

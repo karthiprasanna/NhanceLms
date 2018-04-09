@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@drawable/about_background" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="@dimen/login_insti_image_width"
+            android:layout_height="@dimen/login_insti_image_height"
+            android:contentDescription="@string/img"
+            android:src="@drawable/logo_for_acme" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/about_app_version_margin_top"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/version"
+                android:textColor="@color/darkergrey"
+                android:textSize="@dimen/about_app_version_font_size" />
+
+            <TextView
+                android:id="@+id/about_app_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="1.0"
+                android:textColor="@color/darkerblue"
+                android:textSize="@dimen/about_app_version_font_size" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/about_institute_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/about_institute_name_margin_bottom"
+            android:layout_marginTop="@dimen/about_institute_name_margin_top"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/lightgrey"
+            android:textSize="@dimen/about_institute_name_font_size" />
+
+        <TextView
+            android:id="@+id/take_to_terms"
+            style="@style/about_item"
+android:background="@drawable/rounded_corner"
+            android:textColor="@color/white"
+            android:text="@string/terms_and_conditions" />
+
+        <TextView
+            android:id="@+id/take_to_privacy"
+            style="@style/about_item"
+            android:background="@drawable/rounded_corner"
+            android:textColor="@color/white"
+            android:text="@string/privacy_policy" />
+
+        <TextView
+            android:id="@+id/take_to_credits"
+            style="@style/about_item"
+            android:background="@drawable/rounded_corner"
+            android:textColor="@color/white"
+            android:text="@string/credits" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="@dimen/about_powered_by_padding_bottom" >
+
+        <TextView
+            android:id="@+id/powered_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/powered_by_Nhance"
+            android:textColor="@color/lightgrey"
+            android:textSize="@dimen/about_powered_by_font_size" />
+
+        <ImageView
+            android:layout_width="@dimen/about_powered_by_image_width"
+            android:layout_height="@dimen/about_powered_by_image_height"
+            android:layout_marginLeft="@dimen/about_powered_by_image_margin_left"
+            android:layout_toRightOf="@id/powered_by"
+            android:scaleType="fitCenter"
+            android:src="@drawable/nhance_power_logo" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+
+    android:clickable="true"
+    cardview:cardCornerRadius="10dp"
+    cardview:cardElevation="2dp"
+    cardview:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:id="@+id/ddd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/level_attempt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/channelname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="Channel name"
+                    android:textColor="#33B5E5"
+                    android:textSize="@dimen/challenge_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/channelname"
+                    android:paddingLeft="10dp"
+                    android:text="Level:"
+                    android:textColor="#666"
+                    android:textSize="@dimen/challenge_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/leveltext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/channelname"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/level"
+                    android:text=""
+                    android:textColor="#666"
+                    android:textSize="@dimen/challenge_text_size" />
+
+                <TextView
+                    android:id="@+id/attempts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/level"
+                    android:paddingLeft="10dp"
+                    android:text="Attempts:"
+                    android:textColor="#666"
+                    android:textSize="@dimen/challenge_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/attemptstext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/leveltext"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/attempts"
+                    android:text=""
+                    android:textColor="#666"
+                    android:textSize="@dimen/challenge_text_size" />
+
+                <RelativeLayout
+                    android:id="@+id/timeleft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true">
+
+                    <ProgressBar
+                        android:id="@+id/progressBarCircle"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/drawable_circle_yellow"
+                        android:secondaryProgress="100"
+
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/challenge_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:lineSpacingMultiplier=".85"
+                            android:text="01:10:00"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:text="Hrs Left"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/test_analytics_common_text_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+
+            android:id="@+id/acsubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ddd"
+            android:paddingLeft="10dp"
+            android:text="Subject:"
+            android:textColor="#666"
+            android:textSize="@dimen/challenge_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/acsubjecttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ddd"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/acsubject"
+            android:text=""
+            android:textColor="#666"
+            android:textSize="@dimen/challenge_text_size" />
+
+        <TextView
+            android:id="@+id/actopic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/acsubject"
+            android:paddingLeft="10dp"
+            android:text="Topic:"
+            android:textColor="#666"
+            android:textSize="@dimen/challenge_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/actopictext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/acsubject"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+
+            android:layout_toRightOf="@id/actopic"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#666"
+            android:textSize="@dimen/challenge_text_size" />
+
+
+        <TextView
+            android:id="@+id/challengetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/actopic"
+            android:paddingLeft="10dp"
+            android:text="Challenge Time:"
+            android:textColor="#666"
+            android:textSize="@dimen/challenge_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/challengetime_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/actopic"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/challengetime"
+            android:text=""
+            android:textColor="#666"
+            android:textSize="@dimen/challenge_text_size" />
+
+        <TextView
+            android:id="@+id/challenge_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="challenge"
+            android:textSize="@dimen/challenge_text_size"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/challengetime_text"
+            android:background="@drawable/rounded_corner2">
+
+            <RelativeLayout
+                android:id="@+id/button_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/red"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/take_challenge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/red"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Take this Challenge"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/challenge_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/points_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/button_position"
+                android:background="@color/grey">
+
+
+                <TextView
+                    android:id="@+id/pointstext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/cc_view_challenge"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:maxWidth="200dp"
+                    android:padding="10dp"
+                    android:text="gggggggggggggg"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/challenge_text_size"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+

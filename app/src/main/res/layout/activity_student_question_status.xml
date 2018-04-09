@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nhance.android.QuestionCount.SingleExamActivity">
+
+    <TextView
+        android:id="@+id/question_no"
+        android:layout_width="@dimen/test_rank_list_item_rank_block_width"
+        android:layout_height="@dimen/test_rank_list_item_block_size"
+        android:background="@color/lightestgrey"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text=""
+        android:textSize="@dimen/test_rank_list_item_rank_text_size"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+
+
+        android:gravity="center|right"
+        android:layout_toRightOf="@+id/question_no"
+        android:id="@+id/content_student_performance"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/test_rank_list_item_block_size"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/test_rank_list_item_rank_info_padding_bottom"
+        android:paddingLeft="@dimen/test_rank_list_item_rank_info_padding_left"
+        android:paddingRight="@dimen/test_rank_list_item_rank_info_padding_right"
+        android:paddingTop="@dimen/test_rank_list_item_rank_info_padding_top" >
+
+
+
+
+
+        <TextView
+            android:textSize="@dimen/assignmet_text_size"
+            android:textColor="@color/orange"
+            android:id="@+id/list_questiontype"
+            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/type_caps"/>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/list_questiontype"
+            android:textSize="@dimen/assignmet_text_size"
+            android:textColor="@color/slpdarkgreen"
+            android:id="@+id/attempt_btn"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Attempt"/>
+
+
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_below="@+id/content_student_performance"
+        android:layout_above="@+id/view_answer"
+        android:layout_margin="5dp"
+        android:id="@+id/framlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

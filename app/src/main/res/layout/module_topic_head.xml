@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/module_topic_head_height" >
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/module_topic_head_line_margin_left"
+        android:background="@color/lightgrey" />
+
+    <TextView
+        android:id="@+id/module_topic_count"
+        android:layout_width="@dimen/module_topic_count_dimen"
+        android:layout_height="@dimen/module_topic_count_dimen"
+        android:layout_marginLeft="@dimen/module_topic_count_margin_left"
+        android:layout_marginTop="@dimen/module_topic_count_margin_top"
+        android:background="@drawable/dot_module_topic_count"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/module_topic_count_font_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/module_topic_title"
+        style="@style/module_entry_title"
+        android:layout_marginLeft="@dimen/module_topic_title_margin_left"
+        android:layout_marginTop="@dimen/module_topic_title_margin_top"
+        android:layout_toRightOf="@id/module_topic_count"
+        android:text="Section 1"
+        android:textStyle="bold" />
+
+</RelativeLayout>

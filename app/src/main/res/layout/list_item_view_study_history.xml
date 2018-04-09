@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/profile_study_history_padding_bottom"
+    android:paddingLeft="@dimen/profile_study_history_padding_left"
+    android:paddingRight="@dimen/profile_study_history_padding_right"
+    android:paddingTop="@dimen/profile_study_history_padding_top" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/study_history_content_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/dummy_big_string"
+            android:textColor="@color/darkergrey"
+            android:textSize="@dimen/profile_study_history_title_font_size" />
+
+        <TextView
+            android:id="@+id/study_history_content_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_source"
+            android:textColor="@color/darkgrey"
+            android:textSize="@dimen/profile_study_history_content_type_font_size" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/study_history_time_string"
+        android:layout_width="@dimen/profile_study_history_time_width"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="right"
+        android:singleLine="true"
+        android:text="@string/dummy_study_history_time"
+        android:textColor="@color/darkgrey"
+        android:textSize="@dimen/profile_study_history_time_font_size" />
+
+</LinearLayout>
